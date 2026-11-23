@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARQ. TRIBU ESTUDIO & TRIBU | Arquitectura, Construcción y Mobiliario de Autor</title>
+  <meta name="description" content="Más de 10 años proyectando arquitectura contemporánea, construcción integral y mobiliario artesanal en madera sólida en Tegucigalpa, Copán y Choluteca." />
+
+  <!-- Tipografía Editorial Europea: Cormorant Garamond + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. SISTEMA DE DISEÑO & PALETA (PIEDRA TRAVERTINO, NOGAL ESPRESSO Y LATÓN)
+       ========================================================================== */
+    :root {
+      --stone-bg: #F4EFE6;
+      --stone-alt: #EAE2D3;
+      --stone-card: #FAF7F2;
+      --stone-border: rgba(28, 25, 23, 0.12);
+      --espresso: #14110E;
+      --espresso-elevated: #1D1814;
+      --espresso-border: rgba(244, 239, 230, 0.14);
+      --walnut: #8E5F36;
+      --brass: #C6A464;
+      --brass-light: #D8BA80;
+      --ink: #1C1917;
+      --muted: #655D54;
+      --light-text: #F4EFE6;
+      --light-muted: rgba(244, 239, 230, 0.74);
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      background-color: var(--stone-bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      overflow-x: hidden;
+      line-height: 1.65;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1340px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+    }
+
+    /* Utilidades Tipográficas */
+    .eyebrow {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--brass);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 28px;
+      height: 1px;
+      background: currentColor;
+      opacity: 0.75;
+    }
+
+    .eyebrow-dark {
+      color: var(--walnut);
+    }
+
+    .serif-title {
+      font-family: var(--serif);
+      font-weight: 400;
+      line-height: 1.07;
+      letter-spacing: -0.015em;
+    }
+
+    /* Coreografía de Transiciones al Hacer Scroll */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.95s var(--ease-editorial), transform 0.95s var(--ease-editorial);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: 0.12s; }
+    .delay-2 { transition-delay: 0.24s; }
+    .delay-3 { transition-delay: 0.36s; }
+
+    /* ==========================================================================
+       2. BARRA DE NAVEGACIÓN CORPORATIVA
+       ========================================================================== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.25rem 0;
+      transition: background-color 0.45s ease, padding 0.45s ease, border-color 0.45s ease;
+      border-bottom: 1px solid rgba(244, 239, 230, 0.1);
+      background: linear-gradient(180deg, rgba(20, 17, 14, 0.84) 0%, rgba(20, 17, 14, 0.28) 100%);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .navbar.scrolled {
+      background: rgba(20, 17, 14, 0.96);
+      padding: 0.85rem 0;
+      border-bottom-color: rgba(198, 164, 100, 0.24);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand-cluster img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .brand-divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(244, 239, 230, 0.26);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--light-muted);
+      position: relative;
+      padding: 0.35rem 0;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--light-text);
+    }
+
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 1px;
+      background: var(--brass);
+    }
+
+    .nav-pill {
+      padding: 0.65rem 1.25rem !important;
+      border: 1px solid rgba(198, 164, 100, 0.55);
+      color: var(--brass) !important;
+      transition: all 0.35s ease !important;
+    }
+
+    .nav-pill:hover {
+      background: var(--brass);
+      color: var(--espresso) !important;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: 1px solid rgba(244, 239, 230, 0.3);
+      color: var(--light-text);
+      padding: 0.5rem 0.9rem;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       3. PORTADA EDITORIAL (HERO DUAL)
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      background-color: var(--espresso);
+      color: var(--light-text);
+      padding: 8.5rem 0 5rem;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(180deg, rgba(20, 17, 14, 0.56) 0%, rgba(20, 17, 14, 0.38) 42%, rgba(20, 17, 14, 0.95) 100%),
+        url('hero-residencia.jpg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.03);
+      animation: heroSlowZoom 20s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes heroSlowZoom {
+      from { transform: scale(1.02); }
+      to { transform: scale(1.08); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-logos img {
+      height: 58px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 22px rgba(0,0,0,0.5));
+    }
+
+    .hero-logos .sep {
+      width: 1px;
+      height: 40px;
+      background: rgba(198, 164, 100, 0.42);
+    }
+
+    .hero-title {
+      font-size: clamp(2.65rem, 6vw, 5.35rem);
+      max-width: 15.5ch;
+      margin-bottom: 1.65rem;
+      color: var(--light-text);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--brass);
+    }
+
+    .hero-bottom-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 2.5rem;
+      align-items: end;
+      padding-top: 2.25rem;
+      border-top: 1px solid rgba(244, 239, 230, 0.18);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 1.3vw, 1.14rem);
+      color: var(--light-muted);
+      max-width: 55ch;
+      font-weight: 300;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
+
+    /* Botones Corporativos */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 1rem 1.85rem;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      transition: all 0.38s var(--ease-editorial);
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .btn-brass {
+      background: var(--brass);
+      color: var(--espresso);
+      border-color: var(--brass);
+    }
+
+    .btn-brass:hover {
+      background: var(--brass-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background: rgba(20, 17, 14, 0.48);
+      color: var(--light-text);
+      border-color: rgba(244, 239, 230, 0.36);
+    }
+
+    .btn-outline-light:hover {
+      border-color: var(--brass);
+      color: var(--brass);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       4. MANIFIESTO, MISIÓN Y VISIÓN (PIEDRA TRAVERTINO)
+       ========================================================================== */
+    .section-stone {
+      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
+      background-color: var(--stone-bg);
+      color: var(--ink);
+    }
+
+    .manifesto-header {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+      margin-bottom: 4.25rem;
+    }
+
+    .manifesto-heading {
+      font-size: clamp(2.15rem, 4vw, 3.45rem);
+      margin-top: 1rem;
+    }
+
+    .manifesto-copy {
+      color: var(--muted);
+      font-size: 1.02rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding-top: 0.45rem;
+    }
+
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+      padding: 2.1rem 0;
+      border-top: 1px solid var(--stone-border);
+      border-bottom: 1px solid var(--stone-border);
+      margin-bottom: 4rem;
+    }
+
+    .metric-item strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: clamp(2.25rem, 3.5vw, 3.1rem);
+      font-weight: 400;
+      color: var(--walnut);
+      line-height: 1;
+      margin-bottom: 0.45rem;
+    }
+
+    .metric-item span {
+      font-size: 0.76rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .pillar-card {
+      background: var(--stone-alt);
+      padding: 2.5rem 2.15rem;
+      border: 1px solid var(--stone-border);
+      transition: transform 0.4s var(--ease-editorial), border-color 0.4s ease;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--walnut);
+    }
+
+    .pillar-num {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--walnut);
+      margin-bottom: 0.9rem;
+      display: block;
+    }
+
+    .pillar-card h3 {
+      font-family: var(--serif);
+      font-size: 1.65rem;
+      font-weight: 500;
+      margin-bottom: 0.85rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.94rem;
+      color: var(--muted);
+    }
+
+    /* ==========================================================================
+       5. DOS DIVISIONES 50/50 (NOGAL ESPRESSO ATMOSFÉRICO)
+       ========================================================================== */
+    .section-espresso {
+      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
+      background-color: var(--espresso);
+      color: var(--light-text);
+    }
+
+    .section-intro-center {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 4.25rem;
+    }
+
+    .section-intro-center .eyebrow::before {
+      display: none;
+    }
+
+    .section-intro-center h2 {
+      font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+      margin: 0.85rem 0 1rem;
+    }
+
+    .section-intro-center p {
+      color: var(--light-muted);
+      font-size: 1rem;
+      font-weight: 300;
+    }
+
+    .divisions-split {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.35rem;
+    }
+
+    .division-card {
+      background: var(--espresso-elevated);
+      border: 1px solid var(--espresso-border);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: border-color 0.45s ease, transform 0.45s var(--ease-editorial);
+    }
+
+    .division-card:hover {
+      border-color: rgba(198, 164, 100, 0.52);
+      transform: translateY(-4px);
+    }
+
+    .division-media {
+      position: relative;
+      height: 360px;
+      overflow: hidden;
+    }
+
+    .division-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.95s var(--ease-editorial);
+    }
+
+    .division-card:hover .division-media img {
+      transform: scale(1.05);
+    }
+
+    .division-badge {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background: rgba(20, 17, 14, 0.86);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(198, 164, 100, 0.38);
+      padding: 0.45rem 0.95rem;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brass);
+    }
+
+    .division-body {
+      padding: 2.5rem 2.35rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .division-logo-box {
+      height: 66px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.35rem;
+    }
+
+    .division-logo-box img {
+      max-height: 66px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .division-lead {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 0.6rem;
+    }
+
+    .division-body h3 {
+      font-family: var(--serif);
+      font-size: 1.95rem;
+      font-weight: 400;
+      margin-bottom: 0.95rem;
+    }
+
+    .division-desc {
+      color: var(--light-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.65rem;
+      font-weight: 300;
+    }
+
+    .division-list {
+      list-style: none;
+      display: grid;
+      gap: 0.68rem;
+      margin-bottom: 2.25rem;
+      padding-top: 1.3rem;
+      border-top: 1px solid var(--espresso-border);
+      font-size: 0.9rem;
+      color: var(--light-text);
+    }
+
+    .division-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+
+    .division-list li::before {
+      content: "—";
+      color: var(--brass);
+      flex-shrink: 0;
+    }
+
+    .division-actions {
+      margin-top: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+    }
+
+    /* ==========================================================================
+       6. GALERÍA DE PROYECTOS, DISEÑOS Y ACABADOS (FILTRABLE + LIGHTBOX)
+       ========================================================================== */
+    .portfolio-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin-bottom: 3.25rem;
+    }
+
+    .portfolio-top h2 {
+      font-size: clamp(2.15rem, 4vw, 3.45rem);
+      margin-top: 0.75rem;
+    }
+
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+
+    .filter-btn {
+      background: transparent;
+      border: 1px solid var(--stone-border);
+      color: var(--muted);
+      padding: 0.68rem 1.25rem;
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--espresso);
+      color: var(--light-text);
+      border-color: var(--espresso);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.85rem;
+    }
+
+    .work-card {
+      background: var(--stone-card);
+      border: 1px solid var(--stone-border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.45s var(--ease-editorial), box-shadow 0.45s ease;
+    }
+
+    .work-card.hidden {
+      display: none;
+    }
+
+    .work-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 42px rgba(20, 17, 14, 0.09);
+    }
+
+    .work-img-wrap {
+      position: relative;
+      aspect-ratio: 4 / 3.8;
+      overflow: hidden;
+      background: var(--espresso);
+    }
+
+    .work-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.9s var(--ease-editorial);
+    }
+
+    .work-card:hover .work-img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .work-tag {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background: rgba(20, 17, 14, 0.84);
+      color: var(--light-text);
+      padding: 0.38rem 0.85rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .work-info {
+      padding: 1.5rem 1.6rem;
+    }
+
+    .work-info span {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      margin-bottom: 0.35rem;
+    }
+
+    .work-info h3 {
+      font-family: var(--serif);
+      font-size: 1.48rem;
+      font-weight: 500;
+      margin-bottom: 0.42rem;
+    }
+
+    .work-info p {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    /* ==========================================================================
+       7. DIRECCIÓN & LIDERAZGO (50/50 EQUILIBRADO)
+       ========================================================================== */
+    .leadership-section {
+      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
+      background: var(--stone-alt);
+      border-top: 1px solid var(--stone-border);
+      border-bottom: 1px solid var(--stone-border);
+    }
+
+    .leaders-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: clamp(2rem, 5vw, 4.5rem);
+      margin-top: 3.5rem;
+    }
+
+    .leader-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--stone-bg);
+      border: 1px solid var(--stone-border);
+      overflow: hidden;
+    }
+
+    .leader-photo {
+      aspect-ratio: 4 / 4.3;
+      overflow: hidden;
+      background: #231E1A;
+    }
+
+    .leader-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      transition: transform 0.9s var(--ease-editorial);
+    }
+
+    .leader-card:hover .leader-photo img {
+      transform: scale(1.03);
+    }
+
+    .leader-bio {
+      padding: 2.35rem 2.15rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .leader-role {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+      color: var(--walnut);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .leader-bio h3 {
+      font-family: var(--serif);
+      font-size: 2.05rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .leader-bio p {
+      font-size: 0.94rem;
+      color: var(--muted);
+      margin-bottom: 1.45rem;
+    }
+
+    .leader-quote {
+      margin-top: auto;
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 1.18rem;
+      color: var(--ink);
+      padding-left: 1rem;
+      border-left: 2px solid var(--walnut);
+    }
+
+    /* ==========================================================================
+       8. PUENTE AL ECOSISTEMA DIGITAL & PROTOCOLO OFICIAL DE CITAS
+       ========================================================================== */
+    .ecosystem-bridge {
+      padding: clamp(4.75rem, 8vw, 7.25rem) 0;
+      background: var(--espresso);
+      color: var(--light-text);
+    }
+
+    .bridge-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2.5rem;
+      align-items: stretch;
+    }
+
+    .bridge-box {
+      background: var(--espresso-elevated);
+      border: 1px solid var(--espresso-border);
+      padding: clamp(2.1rem, 4vw, 3.35rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .bridge-box.highlight {
+      border-color: rgba(198, 164, 100, 0.45);
+      background: linear-gradient(155deg, #221B16 0%, #16120F 100%);
+    }
+
+    .bridge-box h3 {
+      font-family: var(--serif);
+      font-size: clamp(1.9rem, 3vw, 2.55rem);
+      font-weight: 400;
+      margin: 0.85rem 0 1rem;
+    }
+
+    .bridge-box p {
+      color: var(--light-muted);
+      font-size: 0.96rem;
+      font-weight: 300;
+      margin-bottom: 1.85rem;
+    }
+
+    .protocol-list {
+      display: grid;
+      gap: 1.2rem;
+    }
+
+    .protocol-item {
+      padding-bottom: 1.15rem;
+      border-bottom: 1px solid var(--espresso-border);
+    }
+
+    .protocol-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .protocol-item strong {
+      display: block;
+      font-size: 0.76rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--brass);
+      margin-bottom: 0.32rem;
+    }
+
+    .protocol-item span {
+      font-size: 0.92rem;
+      color: var(--light-muted);
+    }
+
+    /* ==========================================================================
+       9. PIE DE PÁGINA & CRÉDITO VANGUARD DIGITAL SYSTEMS
+       ========================================================================== */
+    .footer {
+      background: #0E0C0A;
+      color: var(--light-muted);
+      padding: 4.25rem 0 2.35rem;
+      border-top: 1px solid rgba(198, 164, 100, 0.18);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 2.5rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(244, 239, 230, 0.1);
+    }
+
+    .footer-logos {
+      display: flex;
+      align-items: center;
+      gap: 1.35rem;
+      margin-bottom: 1.15rem;
+    }
+
+    .footer-logos img {
+      height: 46px;
+      width: auto;
+    }
+
+    .footer h4 {
+      font-size: 0.74rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--light-text);
+      margin-bottom: 1.15rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: grid;
+      gap: 0.68rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--brass);
+    }
+
+    .footer-bottom {
+      padding-top: 1.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: rgba(244, 239, 230, 0.52);
+    }
+
+    .vanguard-credit span {
+      color: var(--brass);
+      font-weight: 500;
+      letter-spacing: 0.06em;
+    }
+
+    /* Modal Lightbox de Inspección de Obra */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(14, 12, 10, 0.94);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox-inner {
+      max-width: 980px;
+      width: 100%;
+      background: var(--espresso-elevated);
+      border: 1px solid rgba(198, 164, 100, 0.38);
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .lightbox-inner img {
+      width: 100%;
+      height: 100%;
+      max-height: 80vh;
+      object-fit: cover;
+    }
+
+    .lightbox-details {
+      padding: 2.6rem 2.1rem;
+      color: var(--light-text);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(20, 17, 14, 0.88);
+      border: 1px solid rgba(244, 239, 230, 0.32);
+      color: var(--light-text);
+      width: 40px;
+      height: 40px;
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       10. ADAPTACIÓN RESPONSIVA (TABLET Y MÓVIL)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-bottom-grid,
+      .manifesto-header,
+      .divisions-split,
+      .leaders-grid,
+      .bridge-grid,
+      .footer-top,
+      .lightbox-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        justify-content: flex-start;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--espresso);
+        flex-direction: column;
+        padding: 1.75rem;
+        gap: 1.25rem;
+        border-bottom: 1px solid rgba(198, 164, 100, 0.25);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: inline-block;
+      }
+
+      .metrics-strip,
+      .pillars-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand-cluster" aria-label="Inicio Grupo Tribu">
+        <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
+        <span class="brand-divider"></span>
+        <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" />
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">Menú</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">La Firma</a></li>
+        <li><a href="#divisiones">Divisiones</a></li>
+        <li><a href="#obras">Obras & Diseños</a></li>
+        <li><a href="#liderazgo">Dirección</a></li>
+        <li><a href="catalogo.html">Catálogo Dual</a></li>
+        <li><a href="visualizador.html" class="nav-pill">Visualization Center</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 01. PORTADA EDITORIAL (HERO) -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-logos reveal">
+        <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
+        <span class="sep"></span>
+        <img src="logo-tribu.png" alt="Tribu Mobiliario" />
+      </div>
+
+      <span class="eyebrow reveal delay-1">Arquitectura • Construcción • Ebanistería de Autor</span>
+
+      <h1 class="serif-title hero-title reveal delay-1">
+        La arquitectura construye el espacio. <em>El detalle construye el legado.</em>
+      </h1>
+
+      <div class="hero-bottom-grid reveal delay-2">
+        <p class="hero-subtitle">
+          Más de una década proyectando residencias contemporáneas, espacios comerciales y mobiliario artesanal en madera sólida en Tegucigalpa, Copán y Choluteca.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#divisiones" class="btn btn-outline-light">Explorar Divisiones</a>
+          <a href="visualizador.html" class="btn btn-brass">Diseñar mi Proyecto</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02. MANIFIESTO, MISIÓN Y VISIÓN -->
+  <section class="section-stone" id="firma">
+    <div class="container">
+      <div class="manifesto-header">
+        <div class="reveal">
+          <span class="eyebrow eyebrow-dark">Nuestra Esencia</span>
+          <h2 class="serif-title manifesto-heading">
+            No diseñamos proyectos para hoy; creamos espacios vigentes dentro de 25 años.
+          </h2>
+        </div>
+
+        <div class="manifesto-copy reveal delay-1">
+          <p>
+            Nacimos bajo una convicción clara: la verdadera diferencia en cualquier obra reside en la intención detrás de cada línea, cada textura y cada ensamble. Integramos en una misma casa matriz el rigor estructural de la arquitectura y la calidez irrepetible de la ebanistería hecha a medida.
+          </p>
+          <p>
+            Desde desarrollos residenciales y locales comerciales hasta revestimientos corporativos y piezas únicas para el hogar, acompañamos a cada cliente desde el primer plano y la asesoría bancaria hasta la entrega llave en mano.
+          </p>
+        </div>
+      </div>
+
+      <div class="metrics-strip reveal">
+        <div class="metric-item">
+          <strong>+10 Años</strong>
+          <span>Trayectoria en Diseño y Construcción</span>
+        </div>
+        <div class="metric-item">
+          <strong>2 Divisiones</strong>
+          <span>Ingeniería Arquitectónica & Alta Ebanistería</span>
+        </div>
+        <div class="metric-item">
+          <strong>3 Ciudades</strong>
+          <span>Tegucigalpa • Copán • Choluteca</span>
+        </div>
+      </div>
+
+      <div class="pillars-grid">
+        <article class="pillar-card reveal">
+          <span class="pillar-num">01 / Misión</span>
+          <h3>Arquitectura con Intención</h3>
+          <p>
+            Transformar terrenos, residencias y marcas comerciales en espacios funcionales, luminosos y atemporales mediante materiales nobles, planificación precisa y ejecución transparente.
+          </p>
+        </article>
+
+        <article class="pillar-card reveal delay-1">
+          <span class="pillar-num">02 / Visión</span>
+          <h3>Referente de Diseño Integral</h3>
+          <p>
+            Consolidarnos como la firma hondureña de referencia donde la arquitectura contemporánea y el mobiliario artesanal dialogan con estándares estéticos internacionales.
+          </p>
+        </article>
+
+        <article class="pillar-card reveal delay-2">
+          <span class="pillar-num">03 / Materialidad</span>
+          <h3>Oficio y Permanencia</h3>
+          <p>
+            Piedra natural, concreto aparente, acero negro, mármol y maderas seleccionadas trabajadas pieza por pieza para garantizar durabilidad generacional.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03. LAS DOS DIVISIONES (EQUILIBRIO 50/50) -->
+  <section class="section-espresso" id="divisiones">
+    <div class="container">
+      <div class="section-intro-center reveal">
+        <span class="eyebrow">Dos Firmas, Un Mismo Estándar</span>
+        <h2 class="serif-title">Especialización Arquitectónica & Artesanal</h2>
+        <p>
+          Operamos mediante dos departamentos especializados que pueden contratarse de forma independiente o integrarse en un proyecto completo llave en mano.
+        </p>
+      </div>
+
+      <div class="divisions-split">
+        <!-- ALA 1: ARQ. TRIBU ESTUDIO (JORGE ZELAYA) -->
+        <article class="division-card reveal">
+          <div class="division-media">
+            <img src="arq-terraza-chimenea.jpg" alt="Arquitectura Contemporánea Arq. Tribu Estudio" />
+            <span class="division-badge">Arquitectura & Obra Civil</span>
+          </div>
+
+          <div class="division-body">
+            <div class="division-logo-box">
+              <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
+            </div>
+            <span class="division-lead">Dirección: Arq. Jorge Zelaya</span>
+            <h3>Diseño Arquitectónico y Construcción</h3>
+            <p class="division-desc">
+              Desarrollo integral de residencias de autor, plazas y locales comerciales, oficinas corporativas que proyectan identidad de marca y unidades habitacionales modulares escalables.
+            </p>
+
+            <ul class="division-list">
+              <li>Diseño arquitectónico y juego completo de planos constructivos</li>
+              <li>Vivienda modular desde 60 m² preparada para segundas fases</li>
+              <li>Construcción de obra civil, remodelaciones y locales comerciales</li>
+              <li>Gestión de permisos de construcción y asesoría bancaria</li>
+            </ul>
+
+            <div class="division-actions">
+              <a href="catalogo.html#arquitectura" class="btn btn-brass">Ver Modelos Arquitectónicos</a>
+              <a href="#citas" class="btn btn-outline-light">Agendar Cita</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ALA 2: TRIBU MOBILIARIO Y ACABADOS (CRISTA CORRALES) -->
+        <article class="division-card reveal delay-1">
+          <div class="division-media">
+            <img src="tribu-sala-listonados.jpg" alt="Tribu Mobiliario y Revestimientos de Madera" />
+            <span class="division-badge">Mobiliario & Interiorismo</span>
+          </div>
+
+          <div class="division-body">
+            <div class="division-logo-box">
+              <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" />
+            </div>
+            <span class="division-lead">Dirección Creativa: Crista Corrales</span>
+            <h3>Ebanistería de Autor y Acabados</h3>
+            <p class="division-desc">
+              Creación de piezas personalizadas en madera sólida, paredes y cielos de listonados arquitectónicos con iluminación LED indirecta, cocinas, bares y equipamiento comercial.
+            </p>
+
+            <ul class="division-list">
+              <li>Mobiliario residencial y corporativo fabricado 100% a medida</li>
+              <li>Listonados arquitectónicos, bibliotecas reticulares y cielos LED</li>
+              <li>Proyectos hoteleros y corporativos (Edificio Atlas, Holiday Inn)</li>
+              <li>Planes de extrafinanciamiento disponibles para tu proyecto</li>
+            </ul>
+
+            <div class="division-actions">
+              <a href="visualizador.html" class="btn btn-brass">Configurar mi Mueble</a>
+              <a href="catalogo.html#mobiliario" class="btn btn-outline-light">Catálogo de Piezas</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04. PORTAFOLIO DE PROYECTOS, DISEÑOS Y ACABADOS -->
+  <section class="section-stone" id="obras">
+    <div class="container">
+      <div class="portfolio-top reveal">
+        <div>
+          <span class="eyebrow eyebrow-dark">Portafolio Seleccionado</span>
+          <h2 class="serif-title">Proyectos, Diseños & Acabados</h2>
+        </div>
+
+        <div class="filter-bar" role="tablist">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="arquitectura">Arquitectura & Espacios</button>
+          <button class="filter-btn" data-filter="mobiliario">Mobiliario & Madera</button>
+        </div>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- 1. Arquitectura: Galería en Piedra y Madera -->
+        <article class="work-card reveal" data-category="arquitectura" data-title="Galería Exterior en Piedra, Madera & Acero" data-div="Arq. Tribu Estudio" data-desc="Transición fluida entre interior y jardín mediante columnas de acero negro, muros de piedra natural, cielos entablillados de madera cálida y terrazas escalonadas.">
+          <div class="work-img-wrap">
+            <img src="arq-galeria-piedra.jpg" alt="Galería Exterior en Piedra y Madera" />
+            <span class="work-tag">Arquitectura Residencial</span>
+          </div>
+          <div class="work-info">
+            <span>Arq. Tribu Estudio</span>
+            <h3>Galería en Piedra & Madera</h3>
+            <p>Piedra natural, cielo entablillado y estructura en acero negro.</p>
+          </div>
+        </article>
+
+        <!-- 2. Mobiliario: Cielo Listonado & Latón -->
+        <article class="work-card reveal delay-1" data-category="mobiliario" data-title="Plafón de Listonados con Luz LED & Latón" data-div="Tribu Mobiliario & Acabados" data-desc="Cielo falso arquitectónico fabricado en duela de madera sólida con foseado de iluminación cálida indirecta y luminarias cónicas en latón cepillado sobre mármol.">
+          <div class="work-img-wrap">
+            <img src="tribu-cielo-laton.jpg" alt="Cielo Listonado con Luz LED" />
+            <span class="work-tag">Acabados Arquitectónicos</span>
+          </div>
+          <div class="work-info">
+            <span>Tribu Mobiliario</span>
+            <h3>Cielo Listonado & Iluminación LED</h3>
+            <p>Madera sólida con foseado perimetral cálido y detalles en latón.</p>
+          </div>
+        </article>
+
+        <!-- 3. Arquitectura: Loft a Doble Altura -->
+        <article class="work-card reveal delay-2" data-category="arquitectura" data-title="Residencia Loft a Doble Altura & Mezanine" data-div="Arq. Tribu Estudio" data-desc="Diseño espacial de doble altura con ventanales reticulados de piso a techo, escalera escultórica en concreto y mezanine privado revestido en madera.">
+          <div class="work-img-wrap">
+            <img src="arq-loft-doble-altura.jpg" alt="Loft a Doble Altura en Concreto y Madera" />
+            <span class="work-tag">Diseño Espacial</span>
+          </div>
+          <div class="work-info">
+            <span>Arq. Tribu Estudio</span>
+            <h3>Loft Contemporáneo a Doble Altura</h3>
+            <p>Concreto pulido, cancelería negra y mezanine en madera.</p>
+          </div>
+        </article>
+
+        <!-- 4. Mobiliario: Salón Social & Estantería -->
+        <article class="work-card reveal" data-category="mobiliario" data-title="Salón Social & Estantería de Piso a Techo" data-div="Tribu Mobiliario & Acabados" data-desc="Equipamiento integral de área social con librería modular en madera natural, muros en acabado cemento pulido y mobiliario lounge tapizado.">
+          <div class="work-img-wrap">
+            <img src="tribu-salon-corporativo.jpg" alt="Salón Social y Estantería de Madera" />
+            <span class="work-tag">Interiorismo & Lounge</span>
+          </div>
+          <div class="work-info">
+            <span>Tribu Mobiliario</span>
+            <h3>Salón Social & Librería de Autor</h3>
+            <p>Carpintería arquitectónica de piso a techo y mobiliario lounge.</p>
+          </div>
+        </article>
+
+        <!-- 5. Arquitectura: Cocina & Patio Interior -->
+        <article class="work-card reveal delay-1" data-category="arquitectura" data-title="Cocina Integral & Patio Tropical Acristalado" data-div="Arq. Tribu & Tribu Mobiliario" data-desc="Integración total entre cocina en madera cálida, isla monolítica de piedra y comedor artesanal abierto hacia un patio interior ajardinado.">
+          <div class="work-img-wrap">
+            <img src="arq-cocina-jardin.jpg" alt="Cocina y Comedor junto a Jardín Interior" />
+            <span class="work-tag">Proyecto Integral</span>
+          </div>
+          <div class="work-info">
+            <span>Proyecto Integral</span>
+            <h3>Cocina & Patio Interior</h3>
+            <p>Conexión interior-exterior con carpintería minimalista en madera.</p>
+          </div>
+        </article>
+
+        <!-- 6. Mobiliario: Detalle Artesanal Madera y Concreto -->
+        <article class="work-card reveal delay-2" data-category="mobiliario" data-title="Ensamble Artesanal: Madera Sólida & Concreto" data-div="Tribu Mobiliario & Acabados" data-desc="Detalle constructivo de barra revestida en duela vertical de madera natural seleccionada con veta continua bajo cubierta de concreto pulido.">
+          <div class="work-img-wrap">
+            <img src="tribu-detalle-madera.jpg" alt="Detalle Madera Sólida y Concreto" />
+            <span class="work-tag">Oficio Artesanal</span>
+          </div>
+          <div class="work-info">
+            <span>Tribu Mobiliario</span>
+            <h3>Detalle en Madera Sólida & Concreto</h3>
+            <p>Precisión en veta natural y contraste de materiales nobles.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05. DIRECCIÓN Y LIDERAZGO -->
+  <section class="leadership-section" id="liderazgo">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow eyebrow-dark">Dirección & Liderazgo</span>
+        <h2 class="serif-title manifesto-heading">Dos visiones complementarias al frente de cada obra.</h2>
+      </div>
+
+      <div class="leaders-grid">
+        <!-- ARQ. JORGE ZELAYA -->
+        <article class="leader-card reveal">
+          <div class="leader-photo">
+            <img src="jorge-zelaya.png" alt="Arq. Jorge Zelaya — Fundador de Arq. Tribu Estudio" />
+          </div>
+          <div class="leader-bio">
+            <span class="leader-role">Fundador & Director de Arquitectura • Arq. Tribu Estudio</span>
+            <h3>Arq. Jorge Zelaya</h3>
+            <p>
+              Con más de una década liderando proyectos residenciales, comerciales y corporativos en Honduras, dirige la conceptualización arquitectónica, el desarrollo de planos constructivos y la ejecución estructural de cada obra.
+            </p>
+            <blockquote class="leader-quote">
+              “La verdadera diferencia está en los detalles: diseñamos espacios que seguirán funcionando y emocionando dentro de 25 años.”
+            </blockquote>
+          </div>
+        </article>
+
+        <!-- CRISTA CORRALES -->
+        <article class="leader-card reveal delay-1">
+          <div class="leader-photo">
+            <img src="crista-corrales.jpg" alt="Crista Corrales — Directora Creativa de Tribu" />
+          </div>
+          <div class="leader-bio">
+            <span class="leader-role">Directora Creativa & Mobiliario • Tribu</span>
+            <h3>Crista Corrales</h3>
+            <p>
+              Al frente de la división de mobiliario y acabados interiores, traduce la personalidad de cada cliente en piezas de madera sólida, listonados arquitectónicos y atmósferas cálidas donde la proporción y el oficio artesanal son protagonistas.
+            </p>
+            <blockquote class="leader-quote">
+              “En Tribu no solo fabricamos muebles; creamos piezas con alma que acompañan historias por generaciones.”
+            </blockquote>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06. PUENTE AL ECOSISTEMA DIGITAL & PROTOCOLO OFICIAL DE CITAS -->
+  <section class="ecosystem-bridge" id="citas">
+    <div class="container">
+      <div class="bridge-grid">
+        <!-- INVITACIÓN AL ECOSISTEMA DIGITAL -->
+        <div class="bridge-box highlight reveal">
+          <div>
+            <span class="eyebrow">Experiencia Digital Interactiva</span>
+            <h3 class="serif-title">Lo imaginas, lo creamos.</h3>
+            <p>
+              Explorá nuestras colecciones listas para cotizar en el Catálogo Dual o ingresá al <strong>Tribu Visualization Center</strong> para configurar en tiempo real las dimensiones, maderas y acabados de tu próximo proyecto antes de tu asesoría personalizada.
+            </p>
+          </div>
+
+          <div class="division-actions">
+            <a href="visualizador.html" class="btn btn-brass">Abrir Visualization Center</a>
+            <a href="catalogo.html" class="btn btn-outline-light">Explorar Catálogo Dual</a>
+          </div>
+        </div>
+
+        <!-- PROTOCOLO OFICIAL DE CITAS Y FINANCIAMIENTO -->
+        <div class="bridge-box reveal delay-1">
+          <div>
+            <span class="eyebrow">Atención Personalizada</span>
+            <h3 class="serif-title">Citas & Asesoría de Proyectos</h3>
+
+            <div class="protocol-list">
+              <div class="protocol-item">
+                <strong>Arq. Tribu Estudio (Obra y Diseño)</strong>
+                <span>Cita previa con el Arq. Jorge Zelaya con mínimo 3 días de anticipación. El valor de la propuesta se deduce del costo total al realizar el proyecto. Tel: +504 3177-7094.</span>
+              </div>
+
+              <div class="protocol-item">
+                <strong>Tribu Mobiliario & Acabados</strong>
+                <span>Cotizaciones a medida, visitas técnicas y opciones de extrafinanciamiento. Tel: +504 3334-9767 • tribuhn@outlook.com</span>
+              </div>
+
+              <div class="protocol-item">
+                <strong>Respaldo Financiero & Permisos</strong>
+                <span>Acompañamiento en permisos de construcción y asesoría directa con bancos locales para financiamiento de vivienda modular y obra civil.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logos">
+            <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
+            <img src="logo-tribu.png" alt="Tribu Mobiliario" />
+          </div>
+          <p style="font-size: 0.9rem; max-width: 38ch;">
+            Arquitectura contemporánea, construcción integral y ebanistería artesanal de autor en Tegucigalpa, Copán y Choluteca, Honduras.
+          </p>
+        </div>
+
+        <div>
+          <h4>Ecosistema Digital</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">01. La Firma Corporativa</a></li>
+            <li><a href="catalogo.html">02. Catálogo Dual (Obras & Muebles)</a></li>
+            <li><a href="visualizador.html">03. Tribu Visualization Center</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contacto Directo</h4>
+          <ul class="footer-links">
+            <li>Arquitectura: +504 3177-7094</li>
+            <li>Mobiliario: +504 3334-9767</li>
+            <li>Correo: tribuhn@outlook.com</li>
+            <li>Instagram: @arq.tribu • @tribu_hn</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 ARQ. TRIBU ESTUDIO & TRIBU MOBILIARIO. Todos los derechos reservados.</span>
+        <span class="vanguard-credit">Arquitectura Digital por <span>Vanguard Digital Systems</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL LIGHTBOX PARA INSPECCIONAR PROYECTOS -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-details">
+        <span class="eyebrow" id="lightboxDiv" style="margin-bottom: 0.75rem;"></span>
+        <h3 class="serif-title" id="lightboxTitle" style="font-size: 2rem; margin-bottom: 1rem;"></h3>
+        <p id="lightboxDesc" style="color: var(--light-muted); font-size: 0.95rem; margin-bottom: 1.75rem;"></p>
+        <a href="visualizador.html" class="btn btn-brass">Cotizar Proyecto Similar</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Barra de navegación dinámica al hacer scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    // 2. Menú móvil desplegable
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // 3. Transiciones suaves al aparecer cada sección en pantalla
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // 4. Filtro interactivo entre Arquitectura y Mobiliario
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const workCards = document.querySelectorAll('.work-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-filter');
+
+        workCards.forEach(card => {
+          const cat = card.getAttribute('data-category');
+          if (filter === 'all' || cat === filter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // 5. Modal Lightbox para ver detalles de cada obra
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxDiv = document.getElementById('lightboxDiv');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxDesc = document.getElementById('lightboxDesc');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    workCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const img = card.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxDiv.textContent = card.getAttribute('data-div');
+        lightboxTitle.textContent = card.getAttribute('data-title');
+        lightboxDesc.textContent = card.getAttribute('data-desc');
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
