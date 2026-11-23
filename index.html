@@ -3,36 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARQ. TRIBU ESTUDIO & TRIBU | Arquitectura, Construcción y Mobiliario de Autor</title>
-  <meta name="description" content="Más de 10 años proyectando arquitectura contemporánea, construcción integral y mobiliario artesanal en madera sólida en Tegucigalpa, Copán y Choluteca." />
+  <title>Arq. Tribu Estudio &amp; Tribu Mobiliario | Arquitectura y Alta Ebanistería en Honduras</title>
+  <meta name="description" content="Firma integral de arquitectura, construcción y mobiliario de autor en madera sólida. Proyectos residenciales, comerciales y corporativos a nivel nacional en toda Honduras." />
+  <meta name="keywords" content="Arquitectura Tribu, Tribu Mobiliario, constructoras en Tegucigalpa, arquitectura Honduras, mobiliario de autor, ebanistería de lujo, Jorge Zelaya, Crista Corrales" />
 
-  <!-- Tipografía Editorial Europea: Cormorant Garamond + Plus Jakarta Sans -->
+  <!-- SEO Datos Estructurados (Listo para migración a dominio .com en Hostinger) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ArchitecturalFirm",
+    "name": "Arq. Tribu Estudio & Tribu Mobiliario y Acabados",
+    "description": "Firma de diseño arquitectónico, ejecución de obra y fabricación de mobiliario de autor en Honduras.",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Honduras"
+    },
+    "founder": [
+      { "@type": "Person", "name": "Arq. Jorge Zelaya" },
+      { "@type": "Person", "name": "Crista Corrales" }
+    ],
+    "telephone": ["+504 3177-7094", "+504 3334-9767"],
+    "email": "tribuhn@outlook.com"
+  }
+  </script>
+
+  <!-- Tipografías Oficiales -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ==========================================================================
-       1. SISTEMA DE DISEÑO & PALETA (PIEDRA TRAVERTINO, NOGAL ESPRESSO Y LATÓN)
-       ========================================================================== */
     :root {
-      --stone-bg: #F4EFE6;
-      --stone-alt: #EAE2D3;
-      --stone-card: #FAF7F2;
-      --stone-border: rgba(28, 25, 23, 0.12);
-      --espresso: #14110E;
-      --espresso-elevated: #1D1814;
-      --espresso-border: rgba(244, 239, 230, 0.14);
-      --walnut: #8E5F36;
-      --brass: #C6A464;
-      --brass-light: #D8BA80;
-      --ink: #1C1917;
-      --muted: #655D54;
-      --light-text: #F4EFE6;
-      --light-muted: rgba(244, 239, 230, 0.74);
-      --serif: 'Cormorant Garamond', Georgia, serif;
-      --sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+      --obsidian: #070707;
+      --obsidian-soft: #100f0e;
+      --slate-gallery: #171615;
+      --marble-white: #f6f4ef;
+      --marble-white-deep: #ebe7de;
+      --mahogany-dark: #1d100a;
+      --mahogany-mid: #2f190f;
+      --mahogany-warm: #462516;
+      --gold-light: #f3dfa2;
+      --gold-metallic: #d4af37;
+      --gold-deep: #9c7a1e;
+      --ivory: #f5f2eb;
+      --muted-light: #b5afa4;
+      --ink-dark: #161513;
+      --muted-dark: #57524b;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     *, *::before, *::after {
@@ -43,21 +61,23 @@
 
     html {
       font-size: 16px;
-      background-color: var(--stone-bg);
-      color: var(--ink);
-      font-family: var(--sans);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      scroll-behavior: smooth;
+      background-color: var(--obsidian);
+      color: var(--ivory);
     }
 
     body {
-      overflow-x: hidden;
+      font-family: var(--font-sans);
+      background-color: var(--obsidian);
+      color: var(--ivory);
       line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
     }
 
     img {
-      display: block;
       max-width: 100%;
+      display: block;
     }
 
     a {
@@ -65,700 +85,859 @@
       text-decoration: none;
     }
 
-    .container {
-      width: 100%;
-      max-width: 1340px;
-      margin: 0 auto;
-      padding: 0 clamp(1.25rem, 4vw, 3.5rem);
+    /* ============================================================
+       TEXTURAS ARQUITECTÓNICAS PROCEDURALES DE ALTA DEFINICIÓN
+       ============================================================ */
+
+    /* 1. Mármol Negro Resplandeciente (Nero Marquina + Reflejos Oro) */
+    .surface-black-marble {
+      position: relative;
+      background-color: #070707;
+      background-image:
+        radial-gradient(ellipse 80% 55% at 18% 12%, rgba(212, 175, 55, 0.13) 0%, transparent 60%),
+        radial-gradient(ellipse 65% 50% at 85% 82%, rgba(243, 223, 162, 0.08) 0%, transparent 55%),
+        linear-gradient(128deg, transparent 22%, rgba(255, 255, 255, 0.035) 23.2%, rgba(212, 175, 55, 0.07) 23.8%, transparent 25.5%),
+        linear-gradient(134deg, transparent 48%, rgba(255, 255, 255, 0.025) 49%, transparent 50.5%),
+        linear-gradient(52deg, transparent 64%, rgba(212, 175, 55, 0.065) 64.6%, rgba(255, 255, 255, 0.03) 65.1%, transparent 66.8%),
+        radial-gradient(circle at 50% 50%, #121110 0%, #060606 100%);
+      color: var(--ivory);
     }
 
-    /* Utilidades Tipográficas */
-    .eyebrow {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.24em;
-      text-transform: uppercase;
-      color: var(--brass);
+    .surface-black-marble::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.28;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='bm'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.014 0.045' numOctaves='4' seed='11'/%3E%3CfeColorMatrix type='matrix' values='1 0 0 0 0.05  0 1 0 0 0.045  0 0 1 0 0.035  0 0 0 0.45 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23bm)'/%3E%3C/svg%3E");
+      background-size: 520px 520px;
+      mix-blend-mode: screen;
+    }
+
+    /* 2. Mármol Blanco Calacatta / Carrara */
+    .surface-white-marble {
+      position: relative;
+      background-color: var(--marble-white);
+      background-image:
+        radial-gradient(ellipse 75% 55% at 15% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 60%),
+        linear-gradient(124deg, transparent 18%, rgba(130, 122, 110, 0.085) 19.2%, rgba(212, 175, 55, 0.11) 19.7%, transparent 21.5%),
+        linear-gradient(132deg, transparent 54%, rgba(115, 108, 98, 0.075) 55%, transparent 56.8%),
+        linear-gradient(48deg, transparent 70%, rgba(145, 136, 122, 0.07) 71%, transparent 72.5%),
+        linear-gradient(180deg, #faf8f4 0%, #efece4 100%);
+      color: var(--ink-dark);
+    }
+
+    .surface-white-marble::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.35;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='wm'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.012 0.038' numOctaves='4' seed='24'/%3E%3CfeColorMatrix type='matrix' values='0.3 0 0 0 0.65  0 0.3 0 0 0.63  0 0 0.3 0 0.59  0 0 0 0.22 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23wm)'/%3E%3C/svg%3E");
+      background-size: 560px 560px;
+    }
+
+    /* 3. Café Amaderado Caoba Veteado */
+    .surface-mahogany {
+      position: relative;
+      background-color: var(--mahogany-dark);
+      background-image:
+        radial-gradient(ellipse 80% 60% at 80% 18%, rgba(212, 175, 55, 0.14) 0%, transparent 60%),
+        repeating-linear-gradient(
+          92deg,
+          rgba(26, 13, 8, 0.92) 0px,
+          rgba(49, 25, 14, 0.88) 6px,
+          rgba(70, 36, 20, 0.84) 11px,
+          rgba(35, 18, 10, 0.92) 18px,
+          rgba(58, 30, 17, 0.86) 27px
+        ),
+        linear-gradient(145deg, #27140c 0%, #160b06 100%);
+      color: var(--ivory);
+    }
+
+    .surface-mahogany::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.32;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='wd'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.008 0.14' numOctaves='3' seed='7'/%3E%3CfeColorMatrix type='matrix' values='0.5 0 0 0 0.18  0 0.3 0 0 0.08  0 0 0.2 0 0.04  0 0 0 0.45 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23wd)'/%3E%3C/svg%3E");
+      background-size: 420px 420px;
+    }
+
+    /* 4. Piedra Pizarra / Grafito Satinado (Galería de Dirección) */
+    .surface-slate {
+      position: relative;
+      background-color: var(--slate-gallery);
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(212, 175, 55, 0.09) 0%, transparent 65%),
+        linear-gradient(180deg, #1a1918 0%, #121110 100%);
+      color: var(--ivory);
+    }
+
+    /* ============================================================
+       LOGOS EN ORO METÁLICO RESPLANDECIENTE CON REFLEJO DE LUZ
+       ============================================================ */
+    .gold-logo-frame {
+      position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 0.8rem;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+
+    .gold-logo-img {
+      height: 36px;
+      width: auto;
+      object-fit: contain;
+      /* Realce dorado metálico luminoso manteniendo proporción exacta */
+      filter:
+        sepia(0.88)
+        saturate(2.6)
+        hue-rotate(6deg)
+        brightness(1.22)
+        contrast(1.16)
+        drop-shadow(0 0 10px rgba(212, 175, 55, 0.38));
+      transition: transform 0.4s ease, filter 0.4s ease;
+    }
+
+    .gold-logo-frame::after {
+      content: "";
+      position: absolute;
+      top: -20%;
+      left: -130%;
+      width: 65%;
+      height: 140%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 248, 220, 0.55) 50%,
+        transparent 80%
+      );
+      transform: skewX(-22deg);
+      animation: metallicSheen 5.5s ease-in-out infinite;
+      pointer-events: none;
+    }
+
+    .gold-logo-frame:hover .gold-logo-img {
+      transform: scale(1.03);
+      filter:
+        sepia(0.85)
+        saturate(2.9)
+        hue-rotate(6deg)
+        brightness(1.32)
+        contrast(1.18)
+        drop-shadow(0 0 14px rgba(243, 223, 162, 0.55));
+    }
+
+    @keyframes metallicSheen {
+      0%, 58% { left: -130%; }
+      82%, 100% { left: 165%; }
+    }
+
+    /* ============================================================
+       UTILIDADES Y TIPOGRAFÍA
+       ============================================================ */
+    .container {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.35rem;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-metallic);
     }
 
     .eyebrow::before {
       content: "";
-      width: 28px;
+      width: 26px;
       height: 1px;
-      background: currentColor;
-      opacity: 0.75;
+      background: linear-gradient(90deg, var(--gold-metallic), var(--gold-light));
     }
 
     .eyebrow-dark {
-      color: var(--walnut);
+      color: var(--gold-deep);
     }
 
-    .serif-title {
-      font-family: var(--serif);
-      font-weight: 400;
-      line-height: 1.07;
-      letter-spacing: -0.015em;
+    .eyebrow-dark::before {
+      background: var(--gold-deep);
     }
 
-    /* Coreografía de Transiciones al Hacer Scroll */
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: opacity 0.95s var(--ease-editorial), transform 0.95s var(--ease-editorial);
+    .gold-gradient-text {
+      background: linear-gradient(120deg, #c69b27 0%, #f5e2a8 45%, #d4af37 75%, #b5891c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .reveal.is-visible {
-      opacity: 1;
-      transform: translateY(0);
+    .gold-divider {
+      height: 1px;
+      width: 100%;
+      background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.45), transparent);
     }
 
-    .delay-1 { transition-delay: 0.12s; }
-    .delay-2 { transition-delay: 0.24s; }
-    .delay-3 { transition-delay: 0.36s; }
+    /* Botones */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 0.92rem 1.65rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.32s ease;
+      border: 1px solid transparent;
+    }
 
-    /* ==========================================================================
-       2. BARRA DE NAVEGACIÓN CORPORATIVA
-       ========================================================================== */
-    .navbar {
+    .btn-gold {
+      background: linear-gradient(135deg, #e5c66b 0%, #c89d28 100%);
+      color: #0b0a08;
+      box-shadow: 0 8px 26px rgba(212, 175, 55, 0.22);
+    }
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #f3dfa2 0%, #d4af37 100%);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(212, 175, 55, 0.34);
+    }
+
+    .btn-outline-gold {
+      background: rgba(12, 11, 10, 0.55);
+      border-color: rgba(212, 175, 55, 0.55);
+      color: var(--gold-light);
+    }
+
+    .btn-outline-gold:hover {
+      background: rgba(212, 175, 55, 0.14);
+      border-color: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================================
+       HEADER / NAVEGACIÓN
+       ============================================================ */
+    .site-header {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      z-index: 1000;
-      padding: 1.25rem 0;
-      transition: background-color 0.45s ease, padding 0.45s ease, border-color 0.45s ease;
-      border-bottom: 1px solid rgba(244, 239, 230, 0.1);
-      background: linear-gradient(180deg, rgba(20, 17, 14, 0.84) 0%, rgba(20, 17, 14, 0.28) 100%);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      right: 0;
+      z-index: 100;
+      background: rgba(7, 7, 7, 0.86);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
     }
 
-    .navbar.scrolled {
-      background: rgba(20, 17, 14, 0.96);
-      padding: 0.85rem 0;
-      border-bottom-color: rgba(198, 164, 100, 0.24);
-    }
-
-    .nav-inner {
+    .nav-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
-    }
-
-    .brand-cluster {
-      display: flex;
-      align-items: center;
+      min-height: 74px;
       gap: 1rem;
     }
 
-    .brand-cluster img {
-      height: 38px;
-      width: auto;
-      object-fit: contain;
+    .brand-dual {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
     }
 
-    .brand-divider {
+    .brand-sep {
       width: 1px;
-      height: 24px;
-      background: rgba(244, 239, 230, 0.26);
+      height: 28px;
+      background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.65), transparent);
     }
 
     .nav-links {
-      display: flex;
+      display: none;
       align-items: center;
-      gap: 2rem;
-      list-style: none;
+      gap: 1.6rem;
     }
 
     .nav-links a {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: var(--light-muted);
-      position: relative;
-      padding: 0.35rem 0;
-      transition: color 0.3s ease;
+      color: var(--muted-light);
+      transition: color 0.25s ease;
     }
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: var(--light-text);
+    .nav-links a:hover {
+      color: var(--gold-light);
     }
 
-    .nav-links a.active::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      height: 1px;
-      background: var(--brass);
-    }
-
-    .nav-pill {
-      padding: 0.65rem 1.25rem !important;
-      border: 1px solid rgba(198, 164, 100, 0.55);
-      color: var(--brass) !important;
-      transition: all 0.35s ease !important;
-    }
-
-    .nav-pill:hover {
-      background: var(--brass);
-      color: var(--espresso) !important;
+    .nav-cta-desktop {
+      display: none;
     }
 
     .menu-toggle {
-      display: none;
-      background: none;
-      border: 1px solid rgba(244, 239, 230, 0.3);
-      color: var(--light-text);
-      padding: 0.5rem 0.9rem;
-      font-size: 0.72rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 42px;
+      height: 42px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      border-radius: 2px;
+      padding: 0 10px;
       cursor: pointer;
     }
 
-    /* ==========================================================================
-       3. PORTADA EDITORIAL (HERO DUAL)
-       ========================================================================== */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: flex-end;
-      background-color: var(--espresso);
-      color: var(--light-text);
-      padding: 8.5rem 0 5rem;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(180deg, rgba(20, 17, 14, 0.56) 0%, rgba(20, 17, 14, 0.38) 42%, rgba(20, 17, 14, 0.95) 100%),
-        url('hero-residencia.jpg');
-      background-size: cover;
-      background-position: center;
-      transform: scale(1.03);
-      animation: heroSlowZoom 20s ease-in-out infinite alternate;
-      z-index: 0;
-    }
-
-    @keyframes heroSlowZoom {
-      from { transform: scale(1.02); }
-      to { transform: scale(1.08); }
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
+    .menu-toggle span {
+      display: block;
+      height: 1.5px;
       width: 100%;
+      background: var(--gold-light);
     }
 
-    .hero-logos {
+    .mobile-drawer {
+      display: none;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.25rem 1.35rem 1.75rem;
+      background: #0a0908;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.28);
+    }
+
+    .mobile-drawer.open {
       display: flex;
+    }
+
+    .mobile-drawer a {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    @media (min-width: 1024px) {
+      .nav-links { display: flex; }
+      .nav-cta-desktop { display: inline-flex; }
+      .menu-toggle { display: none; }
+      .gold-logo-img { height: 40px; }
+    }
+
+    /* ============================================================
+       SECCIÓN 1: HERO (MÁRMOL NEGRO RESPLANDECIENTE + ENCUADRE NÍTIDO)
+       ============================================================ */
+    .hero-section {
+      padding: 7.4rem 0 4.5rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.24);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2.75rem;
       align-items: center;
-      gap: 1.75rem;
-      margin-bottom: 2rem;
-    }
-
-    .hero-logos img {
-      height: 58px;
-      width: auto;
-      object-fit: contain;
-      filter: drop-shadow(0 8px 22px rgba(0,0,0,0.5));
-    }
-
-    .hero-logos .sep {
-      width: 1px;
-      height: 40px;
-      background: rgba(198, 164, 100, 0.42);
     }
 
     .hero-title {
-      font-size: clamp(2.65rem, 6vw, 5.35rem);
-      max-width: 15.5ch;
-      margin-bottom: 1.65rem;
-      color: var(--light-text);
+      font-family: var(--font-serif);
+      font-size: clamp(2.55rem, 6.2vw, 4.55rem);
+      font-weight: 500;
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      margin: 1.15rem 0 1.35rem;
+      color: var(--ivory);
     }
 
     .hero-title em {
       font-style: italic;
-      color: var(--brass);
+      font-weight: 500;
     }
 
-    .hero-bottom-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 2.5rem;
-      align-items: end;
-      padding-top: 2.25rem;
-      border-top: 1px solid rgba(244, 239, 230, 0.18);
-    }
-
-    .hero-subtitle {
-      font-size: clamp(1rem, 1.3vw, 1.14rem);
-      color: var(--light-muted);
-      max-width: 55ch;
-      font-weight: 300;
+    .hero-lead {
+      font-size: 1.02rem;
+      color: var(--muted-light);
+      max-width: 560px;
+      margin-bottom: 2rem;
     }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      justify-content: flex-end;
-      gap: 1rem;
+      gap: 0.9rem;
+      margin-bottom: 2.6rem;
     }
 
-    /* Botones Corporativos */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.65rem;
-      padding: 1rem 1.85rem;
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      transition: all 0.38s var(--ease-editorial);
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-
-    .btn-brass {
-      background: var(--brass);
-      color: var(--espresso);
-      border-color: var(--brass);
-    }
-
-    .btn-brass:hover {
-      background: var(--brass-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline-light {
-      background: rgba(20, 17, 14, 0.48);
-      color: var(--light-text);
-      border-color: rgba(244, 239, 230, 0.36);
-    }
-
-    .btn-outline-light:hover {
-      border-color: var(--brass);
-      color: var(--brass);
-      transform: translateY(-2px);
-    }
-
-    /* ==========================================================================
-       4. MANIFIESTO, MISIÓN Y VISIÓN (PIEDRA TRAVERTINO)
-       ========================================================================== */
-    .section-stone {
-      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
-      background-color: var(--stone-bg);
-      color: var(--ink);
-    }
-
-    .manifesto-header {
-      display: grid;
-      grid-template-columns: 1.08fr 0.92fr;
-      gap: clamp(2rem, 5vw, 5rem);
-      align-items: start;
-      margin-bottom: 4.25rem;
-    }
-
-    .manifesto-heading {
-      font-size: clamp(2.15rem, 4vw, 3.45rem);
-      margin-top: 1rem;
-    }
-
-    .manifesto-copy {
-      color: var(--muted);
-      font-size: 1.02rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-      padding-top: 0.45rem;
-    }
-
-    .metrics-strip {
+    .hero-metrics {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      padding: 2.1rem 0;
-      border-top: 1px solid var(--stone-border);
-      border-bottom: 1px solid var(--stone-border);
-      margin-bottom: 4rem;
+      gap: 1rem;
+      padding-top: 1.65rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.24);
     }
 
-    .metric-item strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: clamp(2.25rem, 3.5vw, 3.1rem);
-      font-weight: 400;
-      color: var(--walnut);
-      line-height: 1;
-      margin-bottom: 0.45rem;
+    .metric-value {
+      font-family: var(--font-serif);
+      font-size: clamp(1.45rem, 3vw, 2.05rem);
+      font-weight: 600;
+      color: var(--gold-light);
+      line-height: 1.1;
     }
 
-    .metric-item span {
-      font-size: 0.76rem;
-      letter-spacing: 0.14em;
+    .metric-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--muted);
+      color: var(--muted-light);
+      margin-top: 0.3rem;
+    }
+
+    /* Composición visual derecha del Hero (alta nitidez sin estiramiento) */
+    .hero-showcase {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 0.9rem;
+      align-items: stretch;
+    }
+
+    .hero-frame {
+      position: relative;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: #0d0c0b;
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero-frame img {
+      width: 100%;
+      height: 100%;
+      min-height: 290px;
+      max-height: 460px;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+    }
+
+    .hero-frame:hover img {
+      transform: scale(1.03);
+    }
+
+    .hero-frame-tag {
+      position: absolute;
+      left: 0.85rem;
+      bottom: 0.85rem;
+      right: 0.85rem;
+      padding: 0.6rem 0.8rem;
+      background: rgba(8, 8, 8, 0.82);
+      backdrop-filter: blur(8px);
+      border-left: 2px solid var(--gold-metallic);
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+    }
+
+    @media (min-width: 960px) {
+      .hero-section { padding: 8.8rem 0 5.5rem; }
+      .hero-grid { grid-template-columns: 1.12fr 0.88fr; gap: 3.5rem; }
+      .hero-frame img { min-height: 430px; }
+    }
+
+    /* ============================================================
+       SECCIÓN 2: NUESTRA ESENCIA (MÁRMOL BLANCO + 3 PILARES AL CLIENTE)
+       ============================================================ */
+    .essence-section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    .essence-top {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .essence-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 4.5vw, 3.35rem);
+      font-weight: 600;
+      line-height: 1.12;
+      color: var(--ink-dark);
+      margin-top: 0.85rem;
+    }
+
+    .essence-quote span {
+      color: var(--gold-deep);
+      font-style: italic;
+    }
+
+    .essence-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      font-size: 1rem;
+      color: var(--muted-dark);
+    }
+
+    .essence-copy strong {
+      color: var(--ink-dark);
+      font-weight: 600;
     }
 
     .pillars-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: 1fr;
+      gap: 1.35rem;
     }
 
     .pillar-card {
-      background: var(--stone-alt);
-      padding: 2.5rem 2.15rem;
-      border: 1px solid var(--stone-border);
-      transition: transform 0.4s var(--ease-editorial), border-color 0.4s ease;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(156, 122, 30, 0.26);
+      border-top: 2px solid var(--gold-deep);
+      padding: 1.85rem 1.65rem;
+      box-shadow: 0 12px 30px rgba(22, 21, 19, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .pillar-card:hover {
-      transform: translateY(-4px);
-      border-color: var(--walnut);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 36px rgba(22, 21, 19, 0.09);
     }
 
     .pillar-num {
-      font-family: var(--serif);
-      font-size: 1.35rem;
-      font-style: italic;
-      color: var(--walnut);
-      margin-bottom: 0.9rem;
-      display: block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      margin-bottom: 0.65rem;
     }
 
-    .pillar-card h3 {
-      font-family: var(--serif);
-      font-size: 1.65rem;
-      font-weight: 500;
-      margin-bottom: 0.85rem;
+    .pillar-title {
+      font-family: var(--font-serif);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--ink-dark);
+      margin-bottom: 0.65rem;
     }
 
-    .pillar-card p {
-      font-size: 0.94rem;
-      color: var(--muted);
+    .pillar-text {
+      font-size: 0.92rem;
+      color: var(--muted-dark);
     }
 
-    /* ==========================================================================
-       5. DOS DIVISIONES 50/50 (NOGAL ESPRESSO ATMOSFÉRICO)
-       ========================================================================== */
-    .section-espresso {
-      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
-      background-color: var(--espresso);
-      color: var(--light-text);
+    @media (min-width: 900px) {
+      .essence-top { grid-template-columns: 1.05fr 0.95fr; gap: 3.5rem; align-items: end; }
+      .pillars-grid { grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
     }
 
-    .section-intro-center {
+    /* ============================================================
+       SECCIÓN 3: DOS FIRMAS, MISMO ESTÁNDAR (NEGRO MÁRMOL + CAOBA)
+       ============================================================ */
+    .divisions-section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.22);
+    }
+
+    .section-header-center {
       text-align: center;
-      max-width: 740px;
-      margin: 0 auto 4.25rem;
+      max-width: 720px;
+      margin: 0 auto 3.25rem;
     }
 
-    .section-intro-center .eyebrow::before {
-      display: none;
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 4.2vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.12;
+      margin-top: 0.75rem;
     }
 
-    .section-intro-center h2 {
-      font-size: clamp(2.2rem, 4.2vw, 3.6rem);
-      margin: 0.85rem 0 1rem;
-    }
-
-    .section-intro-center p {
-      color: var(--light-muted);
-      font-size: 1rem;
-      font-weight: 300;
-    }
-
-    .divisions-split {
+    .divisions-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2.35rem;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
     }
 
     .division-card {
-      background: var(--espresso-elevated);
-      border: 1px solid var(--espresso-border);
+      position: relative;
+      border: 1px solid rgba(212, 175, 55, 0.34);
+      padding: 2.3rem 1.85rem;
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
+      gap: 1.75rem;
       overflow: hidden;
-      transition: border-color 0.45s ease, transform 0.45s var(--ease-editorial);
+      border-radius: 2px;
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
     }
 
-    .division-card:hover {
-      border-color: rgba(198, 164, 100, 0.52);
-      transform: translateY(-4px);
-    }
-
-    .division-media {
+    .division-top {
       position: relative;
-      height: 360px;
-      overflow: hidden;
-    }
-
-    .division-media img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.95s var(--ease-editorial);
-    }
-
-    .division-card:hover .division-media img {
-      transform: scale(1.05);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
     }
 
     .division-badge {
-      position: absolute;
-      top: 1.25rem;
-      left: 1.25rem;
-      background: rgba(20, 17, 14, 0.86);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(198, 164, 100, 0.38);
-      padding: 0.45rem 0.95rem;
       font-size: 0.68rem;
+      font-weight: 600;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--brass);
+      color: var(--gold-light);
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      background: rgba(0, 0, 0, 0.35);
     }
 
     .division-body {
-      padding: 2.5rem 2.35rem;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
+      position: relative;
+      z-index: 2;
     }
 
-    .division-logo-box {
-      height: 66px;
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.35rem;
-    }
-
-    .division-logo-box img {
-      max-height: 66px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .division-lead {
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--brass);
-      margin-bottom: 0.6rem;
-    }
-
-    .division-body h3 {
-      font-family: var(--serif);
+    .division-name {
+      font-family: var(--font-serif);
       font-size: 1.95rem;
-      font-weight: 400;
-      margin-bottom: 0.95rem;
+      font-weight: 600;
+      color: var(--ivory);
+      margin-bottom: 0.85rem;
     }
 
     .division-desc {
-      color: var(--light-muted);
       font-size: 0.95rem;
-      margin-bottom: 1.65rem;
-      font-weight: 300;
+      color: #d5cfc4;
+      margin-bottom: 1.35rem;
     }
 
     .division-list {
       list-style: none;
       display: grid;
-      gap: 0.68rem;
-      margin-bottom: 2.25rem;
-      padding-top: 1.3rem;
-      border-top: 1px solid var(--espresso-border);
-      font-size: 0.9rem;
-      color: var(--light-text);
+      gap: 0.55rem;
+      font-size: 0.88rem;
+      color: var(--ivory);
     }
 
     .division-list li {
       display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
+      align-items: center;
+      gap: 0.6rem;
     }
 
     .division-list li::before {
-      content: "—";
-      color: var(--brass);
-      flex-shrink: 0;
+      content: "◆";
+      font-size: 0.55rem;
+      color: var(--gold-metallic);
     }
 
     .division-actions {
-      margin-top: auto;
+      position: relative;
+      z-index: 2;
       display: flex;
       flex-wrap: wrap;
-      gap: 0.85rem;
+      gap: 0.8rem;
+      padding-top: 0.5rem;
     }
 
-    /* ==========================================================================
-       6. GALERÍA DE PROYECTOS, DISEÑOS Y ACABADOS (FILTRABLE + LIGHTBOX)
-       ========================================================================== */
-    .portfolio-top {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 1.5rem;
-      margin-bottom: 3.25rem;
+    @media (min-width: 920px) {
+      .divisions-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+      .division-card { padding: 2.75rem 2.4rem; }
     }
 
-    .portfolio-top h2 {
-      font-size: clamp(2.15rem, 4vw, 3.45rem);
-      margin-top: 0.75rem;
+    /* ============================================================
+       SECCIÓN 4: PORTAFOLIO SELECCIONADO (CAMBIO DINÁMICO DE TEXTURA)
+       - Todos -> Mármol Negro Resplandeciente
+       - Arquitectura y Espacios -> Mármol Blanco
+       - Mobiliario y Madera -> Café Amaderado Caoba
+       ============================================================ */
+    .portfolio-section {
+      padding: 5.5rem 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+      transition: background-color 0.65s ease, color 0.45s ease;
     }
 
     .filter-bar {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.8rem;
     }
 
     .filter-btn {
-      background: transparent;
-      border: 1px solid var(--stone-border);
-      color: var(--muted);
-      padding: 0.68rem 1.25rem;
-      font-family: var(--sans);
-      font-size: 0.72rem;
+      padding: 0.78rem 1.4rem;
+      font-size: 0.75rem;
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      background: rgba(12, 11, 10, 0.65);
+      color: var(--ivory);
       cursor: pointer;
+      border-radius: 2px;
       transition: all 0.3s ease;
     }
 
-    .filter-btn:hover,
+    .filter-btn:hover {
+      border-color: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
     .filter-btn.active {
-      background: var(--espresso);
-      color: var(--light-text);
-      border-color: var(--espresso);
+      background: linear-gradient(135deg, #e5c66b 0%, #c89d28 100%);
+      color: #0b0a08;
+      border-color: transparent;
+      box-shadow: 0 8px 22px rgba(212, 175, 55, 0.28);
     }
 
-    .gallery-grid {
+    /* Adaptación cuando el portafolio cambia a Mármol Blanco (Arquitectura) */
+    .portfolio-section.surface-white-marble .section-title {
+      color: var(--ink-dark);
+    }
+    .portfolio-section.surface-white-marble .portfolio-subtitle {
+      color: var(--muted-dark);
+    }
+    .portfolio-section.surface-white-marble .filter-btn:not(.active) {
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--ink-dark);
+      border-color: rgba(156, 122, 30, 0.45);
+    }
+
+    .portfolio-subtitle {
+      color: var(--muted-light);
+      font-size: 0.96rem;
+      margin-top: 0.65rem;
+    }
+
+    .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.85rem;
+      grid-template-columns: 1fr;
+      gap: 1.65rem;
     }
 
-    .work-card {
-      background: var(--stone-card);
-      border: 1px solid var(--stone-border);
+    .project-card {
+      background: rgba(11, 10, 9, 0.9);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 2px;
       overflow: hidden;
-      cursor: pointer;
-      transition: transform 0.45s var(--ease-editorial), box-shadow 0.45s ease;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
     }
 
-    .work-card.hidden {
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-light);
+      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.48);
+    }
+
+    .project-card.hidden-item {
       display: none;
     }
 
-    .work-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 42px rgba(20, 17, 14, 0.09);
-    }
-
-    .work-img-wrap {
+    .project-media {
       position: relative;
-      aspect-ratio: 4 / 3.8;
+      aspect-ratio: 4 / 3;
       overflow: hidden;
-      background: var(--espresso);
+      background: #141210;
     }
 
-    .work-img-wrap img {
+    .project-media img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.9s var(--ease-editorial);
+      transition: transform 0.65s ease;
     }
 
-    .work-card:hover .work-img-wrap img {
-      transform: scale(1.06);
+    .project-card:hover .project-media img {
+      transform: scale(1.04);
     }
 
-    .work-tag {
+    .project-cat {
       position: absolute;
-      bottom: 1rem;
-      left: 1rem;
-      background: rgba(20, 17, 14, 0.84);
-      color: var(--light-text);
-      padding: 0.38rem 0.85rem;
-      font-size: 0.65rem;
+      top: 0.85rem;
+      left: 0.85rem;
+      padding: 0.35rem 0.7rem;
+      background: rgba(8, 8, 8, 0.82);
+      backdrop-filter: blur(6px);
+      border-left: 2px solid var(--gold-metallic);
+      font-size: 0.66rem;
+      font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
+      color: var(--gold-light);
     }
 
-    .work-info {
-      padding: 1.5rem 1.6rem;
+    .project-info {
+      padding: 1.35rem 1.4rem 1.5rem;
+      color: var(--ivory);
     }
 
-    .work-info span {
-      display: block;
-      font-size: 0.7rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--walnut);
+    .project-title {
+      font-family: var(--font-serif);
+      font-size: 1.45rem;
+      font-weight: 600;
       margin-bottom: 0.35rem;
+      color: var(--ivory);
     }
 
-    .work-info h3 {
-      font-family: var(--serif);
-      font-size: 1.48rem;
-      font-weight: 500;
-      margin-bottom: 0.42rem;
+    .project-meta {
+      font-size: 0.84rem;
+      color: var(--muted-light);
     }
 
-    .work-info p {
-      font-size: 0.88rem;
-      color: var(--muted);
+    @media (min-width: 720px) {
+      .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
-    /* ==========================================================================
-       7. DIRECCIÓN & LIDERAZGO (50/50 EQUILIBRADO)
-       ========================================================================== */
+    @media (min-width: 1040px) {
+      .portfolio-grid { grid-template-columns: repeat(3, 1fr); gap: 1.85rem; }
+    }
+
+    /* ============================================================
+       SECCIÓN 5: DIRECCIÓN Y LIDERAZGO (PIEDRA PIZARRA / GALERÍA)
+       ============================================================ */
     .leadership-section {
-      padding: clamp(4.75rem, 8.5vw, 7.75rem) 0;
-      background: var(--stone-alt);
-      border-top: 1px solid var(--stone-border);
-      border-bottom: 1px solid var(--stone-border);
+      padding: 5.5rem 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.24);
     }
 
     .leaders-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: clamp(2rem, 5vw, 4.5rem);
-      margin-top: 3.5rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
 
     .leader-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--stone-bg);
-      border: 1px solid var(--stone-border);
+      display: grid;
+      grid-template-columns: 1fr;
+      background: rgba(10, 10, 9, 0.82);
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 2px;
       overflow: hidden;
     }
 
     .leader-photo {
       aspect-ratio: 4 / 4.3;
       overflow: hidden;
-      background: #231E1A;
+      background: #0d0c0b;
     }
 
     .leader-photo img {
@@ -766,825 +945,569 @@
       height: 100%;
       object-fit: cover;
       object-position: center top;
-      transition: transform 0.9s var(--ease-editorial);
     }
 
-    .leader-card:hover .leader-photo img {
-      transform: scale(1.03);
-    }
-
-    .leader-bio {
-      padding: 2.35rem 2.15rem;
+    .leader-body {
+      padding: 1.75rem 1.65rem;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      justify-content: center;
+      gap: 0.85rem;
     }
 
     .leader-role {
-      font-size: 0.72rem;
+      font-size: 0.7rem;
       font-weight: 600;
-      letter-spacing: 0.19em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      color: var(--walnut);
-      display: block;
-      margin-bottom: 0.5rem;
+      color: var(--gold-metallic);
     }
 
-    .leader-bio h3 {
-      font-family: var(--serif);
-      font-size: 2.05rem;
-      font-weight: 400;
-      margin-bottom: 1rem;
+    .leader-name {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      font-weight: 600;
+      color: var(--ivory);
     }
 
-    .leader-bio p {
-      font-size: 0.94rem;
-      color: var(--muted);
-      margin-bottom: 1.45rem;
-    }
-
-    .leader-quote {
-      margin-top: auto;
-      font-family: var(--serif);
-      font-style: italic;
-      font-size: 1.18rem;
-      color: var(--ink);
-      padding-left: 1rem;
-      border-left: 2px solid var(--walnut);
-    }
-
-    /* ==========================================================================
-       8. PUENTE AL ECOSISTEMA DIGITAL & PROTOCOLO OFICIAL DE CITAS
-       ========================================================================== */
-    .ecosystem-bridge {
-      padding: clamp(4.75rem, 8vw, 7.25rem) 0;
-      background: var(--espresso);
-      color: var(--light-text);
-    }
-
-    .bridge-grid {
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      gap: 2.5rem;
-      align-items: stretch;
-    }
-
-    .bridge-box {
-      background: var(--espresso-elevated);
-      border: 1px solid var(--espresso-border);
-      padding: clamp(2.1rem, 4vw, 3.35rem);
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .bridge-box.highlight {
-      border-color: rgba(198, 164, 100, 0.45);
-      background: linear-gradient(155deg, #221B16 0%, #16120F 100%);
-    }
-
-    .bridge-box h3 {
-      font-family: var(--serif);
-      font-size: clamp(1.9rem, 3vw, 2.55rem);
-      font-weight: 400;
-      margin: 0.85rem 0 1rem;
-    }
-
-    .bridge-box p {
-      color: var(--light-muted);
-      font-size: 0.96rem;
-      font-weight: 300;
-      margin-bottom: 1.85rem;
-    }
-
-    .protocol-list {
-      display: grid;
-      gap: 1.2rem;
-    }
-
-    .protocol-item {
-      padding-bottom: 1.15rem;
-      border-bottom: 1px solid var(--espresso-border);
-    }
-
-    .protocol-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .protocol-item strong {
-      display: block;
-      font-size: 0.76rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      color: var(--brass);
-      margin-bottom: 0.32rem;
-    }
-
-    .protocol-item span {
+    .leader-bio {
       font-size: 0.92rem;
-      color: var(--light-muted);
+      color: var(--muted-light);
     }
 
-    /* ==========================================================================
-       9. PIE DE PÁGINA & CRÉDITO VANGUARD DIGITAL SYSTEMS
-       ========================================================================== */
-    .footer {
-      background: #0E0C0A;
-      color: var(--light-muted);
-      padding: 4.25rem 0 2.35rem;
-      border-top: 1px solid rgba(198, 164, 100, 0.18);
+    @media (min-width: 640px) {
+      .leader-card { grid-template-columns: 0.9fr 1.1fr; }
+      .leader-photo { aspect-ratio: auto; min-height: 290px; }
     }
 
-    .footer-top {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr 1fr;
-      gap: 2.5rem;
-      padding-bottom: 3rem;
-      border-bottom: 1px solid rgba(244, 239, 230, 0.1);
+    @media (min-width: 1040px) {
+      .leaders-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    }
+
+    /* ============================================================
+       SECCIÓN 6: CONTACTO & FOOTER (MÁRMOL NEGRO + EMBLEMA VANGUARD)
+       ============================================================ */
+    .contact-section {
+      padding: 5.5rem 0 3rem;
+    }
+
+    .cta-panel {
+      border: 1px solid rgba(212, 175, 55, 0.36);
+      background: rgba(10, 10, 9, 0.78);
+      backdrop-filter: blur(10px);
+      padding: 2.75rem 1.75rem;
+      text-align: center;
+      border-radius: 2px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6);
+    }
+
+    .cta-panel h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4.2vw, 3.1rem);
+      font-weight: 500;
+      line-height: 1.14;
+      margin: 0.85rem auto 1rem;
+      max-width: 720px;
+    }
+
+    .cta-panel p {
+      color: var(--muted-light);
+      max-width: 610px;
+      margin: 0 auto 2rem;
+      font-size: 0.98rem;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.95rem;
+    }
+
+    .footer-bottom {
+      margin-top: 3.75rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+      font-size: 0.78rem;
+      color: var(--muted-light);
     }
 
     .footer-logos {
       display: flex;
       align-items: center;
-      gap: 1.35rem;
-      margin-bottom: 1.15rem;
+      gap: 0.85rem;
     }
 
-    .footer-logos img {
-      height: 46px;
-      width: auto;
+    .footer-logos .gold-logo-img {
+      height: 30px;
     }
 
-    .footer h4 {
-      font-size: 0.74rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--light-text);
-      margin-bottom: 1.15rem;
-    }
-
-    .footer-links {
-      list-style: none;
-      display: grid;
-      gap: 0.68rem;
-      font-size: 0.9rem;
-    }
-
-    .footer-links a:hover {
-      color: var(--brass);
-    }
-
-    .footer-bottom {
-      padding-top: 1.85rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      font-size: 0.8rem;
-      color: rgba(244, 239, 230, 0.52);
-    }
-
-    .vanguard-credit span {
-      color: var(--brass);
-      font-weight: 500;
-      letter-spacing: 0.06em;
-    }
-
-    /* Modal Lightbox de Inspección de Obra */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      background: rgba(14, 12, 10, 0.94);
-      z-index: 2000;
-      display: none;
+    /* Emblema sutil exclusivo de Vanguard Digital Systems (solo logo, sin texto) */
+    .vanguard-emblem-link {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 1.5rem;
+      padding: 0.45rem;
+      opacity: 0.42;
+      transition: opacity 0.35s ease, transform 0.35s ease;
     }
 
-    .lightbox.open {
-      display: flex;
-    }
-
-    .lightbox-inner {
-      max-width: 980px;
-      width: 100%;
-      background: var(--espresso-elevated);
-      border: 1px solid rgba(198, 164, 100, 0.38);
-      display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .lightbox-inner img {
-      width: 100%;
-      height: 100%;
-      max-height: 80vh;
-      object-fit: cover;
-    }
-
-    .lightbox-details {
-      padding: 2.6rem 2.1rem;
-      color: var(--light-text);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: rgba(20, 17, 14, 0.88);
-      border: 1px solid rgba(244, 239, 230, 0.32);
-      color: var(--light-text);
-      width: 40px;
-      height: 40px;
-      font-size: 1.1rem;
-      cursor: pointer;
-    }
-
-    /* ==========================================================================
-       10. ADAPTACIÓN RESPONSIVA (TABLET Y MÓVIL)
-       ========================================================================== */
-    @media (max-width: 1024px) {
-      .hero-bottom-grid,
-      .manifesto-header,
-      .divisions-split,
-      .leaders-grid,
-      .bridge-grid,
-      .footer-top,
-      .lightbox-inner {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-actions {
-        justify-content: flex-start;
-      }
-
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--espresso);
-        flex-direction: column;
-        padding: 1.75rem;
-        gap: 1.25rem;
-        border-bottom: 1px solid rgba(198, 164, 100, 0.25);
-      }
-
-      .nav-links.open {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: inline-block;
-      }
-
-      .metrics-strip,
-      .pillars-grid,
-      .gallery-grid {
-        grid-template-columns: 1fr;
-      }
+    .vanguard-emblem-link:hover {
+      opacity: 0.96;
+      transform: translateY(-1px);
     }
   </style>
 </head>
 <body>
 
-  <!-- BARRA DE NAVEGACIÓN -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-inner">
-      <a href="index.html" class="brand-cluster" aria-label="Inicio Grupo Tribu">
-        <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
-        <span class="brand-divider"></span>
-        <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" />
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#inicio" class="brand-dual" aria-label="Inicio Arq. Tribu Estudio y Tribu Mobiliario">
+        <span class="gold-logo-frame">
+          <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" class="gold-logo-img" />
+        </span>
+        <span class="brand-sep" aria-hidden="true"></span>
+        <span class="gold-logo-frame">
+          <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" class="gold-logo-img" />
+        </span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">Menú</button>
+      <nav class="nav-links" aria-label="Navegación Principal">
+        <a href="#esencia">Nuestra Esencia</a>
+        <a href="#divisiones">Divisiones</a>
+        <a href="#portafolio">Obras &amp; Diseños</a>
+        <a href="#direccion">Dirección</a>
+        <a href="catalogo.html">Catálogo Dual</a>
+      </nav>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html" class="active">La Firma</a></li>
-        <li><a href="#divisiones">Divisiones</a></li>
-        <li><a href="#obras">Obras & Diseños</a></li>
-        <li><a href="#liderazgo">Dirección</a></li>
-        <li><a href="catalogo.html">Catálogo Dual</a></li>
-        <li><a href="visualizador.html" class="nav-pill">Visualization Center</a></li>
-      </ul>
+      <a href="visualizador.html" class="btn btn-gold nav-cta-desktop">Visualizar mi Mueble</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#esencia">Nuestra Esencia</a>
+      <a href="#divisiones">Divisiones</a>
+      <a href="#portafolio">Obras &amp; Diseños</a>
+      <a href="#direccion">Dirección</a>
+      <a href="catalogo.html">Catálogo Dual</a>
+      <a href="visualizador.html" class="btn btn-gold" style="margin-top:0.4rem;">Visualizar mi Mueble</a>
     </div>
   </header>
 
-  <!-- 01. PORTADA EDITORIAL (HERO) -->
-  <section class="hero">
-    <div class="hero-bg"></div>
-    <div class="container hero-content">
-      <div class="hero-logos reveal">
-        <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
-        <span class="sep"></span>
-        <img src="logo-tribu.png" alt="Tribu Mobiliario" />
-      </div>
-
-      <span class="eyebrow reveal delay-1">Arquitectura • Construcción • Ebanistería de Autor</span>
-
-      <h1 class="serif-title hero-title reveal delay-1">
-        La arquitectura construye el espacio. <em>El detalle construye el legado.</em>
-      </h1>
-
-      <div class="hero-bottom-grid reveal delay-2">
-        <p class="hero-subtitle">
-          Más de una década proyectando residencias contemporáneas, espacios comerciales y mobiliario artesanal en madera sólida en Tegucigalpa, Copán y Choluteca.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#divisiones" class="btn btn-outline-light">Explorar Divisiones</a>
-          <a href="visualizador.html" class="btn btn-brass">Diseñar mi Proyecto</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 02. MANIFIESTO, MISIÓN Y VISIÓN -->
-  <section class="section-stone" id="firma">
-    <div class="container">
-      <div class="manifesto-header">
-        <div class="reveal">
-          <span class="eyebrow eyebrow-dark">Nuestra Esencia</span>
-          <h2 class="serif-title manifesto-heading">
-            No diseñamos proyectos para hoy; creamos espacios vigentes dentro de 25 años.
-          </h2>
-        </div>
-
-        <div class="manifesto-copy reveal delay-1">
-          <p>
-            Nacimos bajo una convicción clara: la verdadera diferencia en cualquier obra reside en la intención detrás de cada línea, cada textura y cada ensamble. Integramos en una misma casa matriz el rigor estructural de la arquitectura y la calidez irrepetible de la ebanistería hecha a medida.
+  <!-- ================= HERO (MÁRMOL NEGRO RESPLANDECIENTE) ================= -->
+  <main id="inicio">
+    <section class="hero-section surface-black-marble">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Arquitectura • Construcción • Ebanistería de Autor</span>
+          <h1 class="hero-title">
+            La arquitectura construye el espacio.
+            <em class="gold-gradient-text">El detalle construye el legado.</em>
+          </h1>
+          <p class="hero-lead">
+            Unimos en una sola firma el rigor estructural de <strong>Arq. Tribu Estudio</strong> y la precisión artesanal en madera sólida de <strong>Tribu Mobiliario y Acabados</strong>. Proyectos llave en mano a nivel nacional en toda Honduras.
           </p>
-          <p>
-            Desde desarrollos residenciales y locales comerciales hasta revestimientos corporativos y piezas únicas para el hogar, acompañamos a cada cliente desde el primer plano y la asesoría bancaria hasta la entrega llave en mano.
-          </p>
-        </div>
-      </div>
 
-      <div class="metrics-strip reveal">
-        <div class="metric-item">
-          <strong>+10 Años</strong>
-          <span>Trayectoria en Diseño y Construcción</span>
-        </div>
-        <div class="metric-item">
-          <strong>2 Divisiones</strong>
-          <span>Ingeniería Arquitectónica & Alta Ebanistería</span>
-        </div>
-        <div class="metric-item">
-          <strong>3 Ciudades</strong>
-          <span>Tegucigalpa • Copán • Choluteca</span>
-        </div>
-      </div>
-
-      <div class="pillars-grid">
-        <article class="pillar-card reveal">
-          <span class="pillar-num">01 / Misión</span>
-          <h3>Arquitectura con Intención</h3>
-          <p>
-            Transformar terrenos, residencias y marcas comerciales en espacios funcionales, luminosos y atemporales mediante materiales nobles, planificación precisa y ejecución transparente.
-          </p>
-        </article>
-
-        <article class="pillar-card reveal delay-1">
-          <span class="pillar-num">02 / Visión</span>
-          <h3>Referente de Diseño Integral</h3>
-          <p>
-            Consolidarnos como la firma hondureña de referencia donde la arquitectura contemporánea y el mobiliario artesanal dialogan con estándares estéticos internacionales.
-          </p>
-        </article>
-
-        <article class="pillar-card reveal delay-2">
-          <span class="pillar-num">03 / Materialidad</span>
-          <h3>Oficio y Permanencia</h3>
-          <p>
-            Piedra natural, concreto aparente, acero negro, mármol y maderas seleccionadas trabajadas pieza por pieza para garantizar durabilidad generacional.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 03. LAS DOS DIVISIONES (EQUILIBRIO 50/50) -->
-  <section class="section-espresso" id="divisiones">
-    <div class="container">
-      <div class="section-intro-center reveal">
-        <span class="eyebrow">Dos Firmas, Un Mismo Estándar</span>
-        <h2 class="serif-title">Especialización Arquitectónica & Artesanal</h2>
-        <p>
-          Operamos mediante dos departamentos especializados que pueden contratarse de forma independiente o integrarse en un proyecto completo llave en mano.
-        </p>
-      </div>
-
-      <div class="divisions-split">
-        <!-- ALA 1: ARQ. TRIBU ESTUDIO (JORGE ZELAYA) -->
-        <article class="division-card reveal">
-          <div class="division-media">
-            <img src="arq-terraza-chimenea.jpg" alt="Arquitectura Contemporánea Arq. Tribu Estudio" />
-            <span class="division-badge">Arquitectura & Obra Civil</span>
+          <div class="hero-actions">
+            <a href="visualizador.html" class="btn btn-gold">Visualizar mi Mueble</a>
+            <a href="catalogo.html" class="btn btn-outline-gold">Explorar Catálogo Dual</a>
           </div>
 
-          <div class="division-body">
-            <div class="division-logo-box">
-              <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
+          <div class="hero-metrics">
+            <div>
+              <div class="metric-value">+10 Años</div>
+              <div class="metric-label">Trayectoria Comprobada</div>
             </div>
-            <span class="division-lead">Dirección: Arq. Jorge Zelaya</span>
-            <h3>Diseño Arquitectónico y Construcción</h3>
-            <p class="division-desc">
-              Desarrollo integral de residencias de autor, plazas y locales comerciales, oficinas corporativas que proyectan identidad de marca y unidades habitacionales modulares escalables.
-            </p>
+            <div>
+              <div class="metric-value">2 Firmas</div>
+              <div class="metric-label">Especialización Integral</div>
+            </div>
+            <div>
+              <div class="metric-value">Nacional</div>
+              <div class="metric-label">En Toda Honduras</div>
+            </div>
+          </div>
+        </div>
 
-            <ul class="division-list">
-              <li>Diseño arquitectónico y juego completo de planos constructivos</li>
-              <li>Vivienda modular desde 60 m² preparada para segundas fases</li>
-              <li>Construcción de obra civil, remodelaciones y locales comerciales</li>
-              <li>Gestión de permisos de construcción y asesoría bancaria</li>
-            </ul>
+        <div class="hero-showcase">
+          <figure class="hero-frame">
+            <img src="arq-terraza-chimenea.jpg" alt="Arquitectura contemporánea en piedra y madera por Arq. Tribu Estudio" />
+            <figcaption class="hero-frame-tag">Arq. Tribu Estudio • Obra &amp; Espacio</figcaption>
+          </figure>
+          <figure class="hero-frame">
+            <img src="tribu-cielo-laton.jpg" alt="Acabados en madera sólida y latón por Tribu Mobiliario" />
+            <figcaption class="hero-frame-tag">Tribu • Madera &amp; Detalle</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NUESTRA ESENCIA (MÁRMOL BLANCO + 3 PILARES) ================= -->
+    <section id="esencia" class="essence-section surface-white-marble">
+      <div class="container">
+        <div class="essence-top">
+          <div>
+            <span class="eyebrow eyebrow-dark">Nuestra Esencia • Firma Integral</span>
+            <h2 class="essence-quote">
+              Lo ordinario se olvida. <span>Lo bien diseñado se hereda.</span>
+            </h2>
+          </div>
+          <div class="essence-copy">
+            <p>
+              En <strong>Grupo Tribu</strong> creemos que el verdadero lujo no necesita alzar la voz: se siente en la proporción exacta de un ambiente, en cómo entra la luz natural y en el carácter irrepetible de una pieza hecha exclusivamente para vos.
+            </p>
+            <p>
+              Integramos bajo una misma dirección la ingeniería y ejecución arquitectónica con la alta ebanistería a medida. Operamos <strong>a nivel nacional, al alcance de quien nos necesite en cualquier punto de Honduras</strong> — desde Tegucigalpa y zonas costeras como Roatán y Tela hasta desarrollos en Copán y Choluteca.
+            </p>
+          </div>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="pillar-num">01 / Visión Integral</div>
+            <h3 class="pillar-title">Un Solo Equipo, Cero Fricciones</h3>
+            <p class="pillar-text">
+              Arquitectura e interiorismo pensados juntos desde el primer trazo. Evitamos el desgaste de coordinar contratistas aislados para que tu obra avance con coherencia estética y control total.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-num">02 / Identidad Propia</div>
+            <h3 class="pillar-title">Diseñado a Tu Medida, Nunca en Serie</h3>
+            <p class="pillar-text">
+              Cada terreno, cada marca y cada familia tienen un ritmo propio. Proyectamos espacios y mobiliario único que reflejan tu estilo de vida o el prestigio de tu empresa.
+            </p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="pillar-num">03 / Respaldo Llave en Mano</div>
+            <h3 class="pillar-title">Del Primer Plano a la Entrega Final</h3>
+            <p class="pillar-text">
+              Te acompañamos en cada etapa crítica: conceptualización, planos constructivos, gestión de permisos, asesoría bancaria y ejecución completa hasta el último ensamble.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DOS FIRMAS, MISMO ESTÁNDAR (NEGRO MÁRMOL + CAOBA) ================= -->
+    <section id="divisiones" class="divisions-section surface-black-marble">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="eyebrow">Dos Firmas, Mismo Estándar</span>
+          <h2 class="section-title">Especialización Arquitectónica y Artesanal</h2>
+        </div>
+
+        <div class="divisions-grid">
+          <!-- Ala 1: Arquitectura (Mármol Negro) -->
+          <article class="division-card surface-black-marble">
+            <div>
+              <div class="division-top">
+                <span class="gold-logo-frame">
+                  <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" class="gold-logo-img" />
+                </span>
+                <span class="division-badge">División Arquitectónica</span>
+              </div>
+
+              <div class="division-body" style="margin-top:1.4rem;">
+                <h3 class="division-name">Arquitectura de Autor &amp; Ejecución Integral</h3>
+                <p class="division-desc">
+                  Proyectamos y construimos residencias contemporáneas, espacios comerciales de alto impacto, oficinas corporativas que comunican el nivel de tu marca y modelos habitacionales modulares listos para crecer por etapas.
+                </p>
+                <ul class="division-list">
+                  <li>Diseño arquitectónico, planos constructivos y gestión de permisos</li>
+                  <li>Obra civil residencial, comercial y corporativa llave en mano</li>
+                  <li>Vivienda modular escalable y asesoría técnica para financiamiento</li>
+                </ul>
+              </div>
+            </div>
 
             <div class="division-actions">
-              <a href="catalogo.html#arquitectura" class="btn btn-brass">Ver Modelos Arquitectónicos</a>
-              <a href="#citas" class="btn btn-outline-light">Agendar Cita</a>
+              <a href="catalogo.html#arquitectura" class="btn btn-outline-gold">Ver Proyectos &amp; Modelos</a>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- ALA 2: TRIBU MOBILIARIO Y ACABADOS (CRISTA CORRALES) -->
-        <article class="division-card reveal delay-1">
-          <div class="division-media">
-            <img src="tribu-sala-listonados.jpg" alt="Tribu Mobiliario y Revestimientos de Madera" />
-            <span class="division-badge">Mobiliario & Interiorismo</span>
-          </div>
+          <!-- Ala 2: Mobiliario (Café Amaderado Caoba) -->
+          <article class="division-card surface-mahogany">
+            <div>
+              <div class="division-top">
+                <span class="gold-logo-frame">
+                  <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" class="gold-logo-img" />
+                </span>
+                <span class="division-badge">Ebanistería &amp; Acabados</span>
+              </div>
 
-          <div class="division-body">
-            <div class="division-logo-box">
-              <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" />
+              <div class="division-body" style="margin-top:1.4rem;">
+                <h3 class="division-name">Mobiliario de Autor &amp; Atmósferas Interiores</h3>
+                <p class="division-desc">
+                  Diseñamos y fabricamos piezas únicas en madera sólida, revestimientos arquitectónicos con iluminación ambiental integrada, cocinas, bares y equipamiento de hospitalidad donde cada veta y cada ensamble tienen intención.
+                </p>
+                <ul class="division-list">
+                  <li>Piezas de autor en madera sólida seleccionadas a medida</li>
+                  <li>Revestimientos de muros, cielos y carpintería arquitectónica</li>
+                  <li>Equipamiento integral para residencias, oficinas y hospitalidad</li>
+                </ul>
+              </div>
             </div>
-            <span class="division-lead">Dirección Creativa: Crista Corrales</span>
-            <h3>Ebanistería de Autor y Acabados</h3>
-            <p class="division-desc">
-              Creación de piezas personalizadas en madera sólida, paredes y cielos de listonados arquitectónicos con iluminación LED indirecta, cocinas, bares y equipamiento comercial.
-            </p>
-
-            <ul class="division-list">
-              <li>Mobiliario residencial y corporativo fabricado 100% a medida</li>
-              <li>Listonados arquitectónicos, bibliotecas reticulares y cielos LED</li>
-              <li>Proyectos hoteleros y corporativos (Edificio Atlas, Holiday Inn)</li>
-              <li>Planes de extrafinanciamiento disponibles para tu proyecto</li>
-            </ul>
 
             <div class="division-actions">
-              <a href="visualizador.html" class="btn btn-brass">Configurar mi Mueble</a>
-              <a href="catalogo.html#mobiliario" class="btn btn-outline-light">Catálogo de Piezas</a>
+              <a href="visualizador.html" class="btn btn-gold">Visualizar mi Mueble</a>
+              <a href="catalogo.html#mobiliario" class="btn btn-outline-gold">Catálogo de Piezas</a>
             </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 04. PORTAFOLIO DE PROYECTOS, DISEÑOS Y ACABADOS -->
-  <section class="section-stone" id="obras">
-    <div class="container">
-      <div class="portfolio-top reveal">
-        <div>
-          <span class="eyebrow eyebrow-dark">Portafolio Seleccionado</span>
-          <h2 class="serif-title">Proyectos, Diseños & Acabados</h2>
-        </div>
-
-        <div class="filter-bar" role="tablist">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="arquitectura">Arquitectura & Espacios</button>
-          <button class="filter-btn" data-filter="mobiliario">Mobiliario & Madera</button>
+          </article>
         </div>
       </div>
+    </section>
 
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- 1. Arquitectura: Galería en Piedra y Madera -->
-        <article class="work-card reveal" data-category="arquitectura" data-title="Galería Exterior en Piedra, Madera & Acero" data-div="Arq. Tribu Estudio" data-desc="Transición fluida entre interior y jardín mediante columnas de acero negro, muros de piedra natural, cielos entablillados de madera cálida y terrazas escalonadas.">
-          <div class="work-img-wrap">
-            <img src="arq-galeria-piedra.jpg" alt="Galería Exterior en Piedra y Madera" />
-            <span class="work-tag">Arquitectura Residencial</span>
-          </div>
-          <div class="work-info">
-            <span>Arq. Tribu Estudio</span>
-            <h3>Galería en Piedra & Madera</h3>
-            <p>Piedra natural, cielo entablillado y estructura en acero negro.</p>
-          </div>
-        </article>
-
-        <!-- 2. Mobiliario: Cielo Listonado & Latón -->
-        <article class="work-card reveal delay-1" data-category="mobiliario" data-title="Plafón de Listonados con Luz LED & Latón" data-div="Tribu Mobiliario & Acabados" data-desc="Cielo falso arquitectónico fabricado en duela de madera sólida con foseado de iluminación cálida indirecta y luminarias cónicas en latón cepillado sobre mármol.">
-          <div class="work-img-wrap">
-            <img src="tribu-cielo-laton.jpg" alt="Cielo Listonado con Luz LED" />
-            <span class="work-tag">Acabados Arquitectónicos</span>
-          </div>
-          <div class="work-info">
-            <span>Tribu Mobiliario</span>
-            <h3>Cielo Listonado & Iluminación LED</h3>
-            <p>Madera sólida con foseado perimetral cálido y detalles en latón.</p>
-          </div>
-        </article>
-
-        <!-- 3. Arquitectura: Loft a Doble Altura -->
-        <article class="work-card reveal delay-2" data-category="arquitectura" data-title="Residencia Loft a Doble Altura & Mezanine" data-div="Arq. Tribu Estudio" data-desc="Diseño espacial de doble altura con ventanales reticulados de piso a techo, escalera escultórica en concreto y mezanine privado revestido en madera.">
-          <div class="work-img-wrap">
-            <img src="arq-loft-doble-altura.jpg" alt="Loft a Doble Altura en Concreto y Madera" />
-            <span class="work-tag">Diseño Espacial</span>
-          </div>
-          <div class="work-info">
-            <span>Arq. Tribu Estudio</span>
-            <h3>Loft Contemporáneo a Doble Altura</h3>
-            <p>Concreto pulido, cancelería negra y mezanine en madera.</p>
-          </div>
-        </article>
-
-        <!-- 4. Mobiliario: Salón Social & Estantería -->
-        <article class="work-card reveal" data-category="mobiliario" data-title="Salón Social & Estantería de Piso a Techo" data-div="Tribu Mobiliario & Acabados" data-desc="Equipamiento integral de área social con librería modular en madera natural, muros en acabado cemento pulido y mobiliario lounge tapizado.">
-          <div class="work-img-wrap">
-            <img src="tribu-salon-corporativo.jpg" alt="Salón Social y Estantería de Madera" />
-            <span class="work-tag">Interiorismo & Lounge</span>
-          </div>
-          <div class="work-info">
-            <span>Tribu Mobiliario</span>
-            <h3>Salón Social & Librería de Autor</h3>
-            <p>Carpintería arquitectónica de piso a techo y mobiliario lounge.</p>
-          </div>
-        </article>
-
-        <!-- 5. Arquitectura: Cocina & Patio Interior -->
-        <article class="work-card reveal delay-1" data-category="arquitectura" data-title="Cocina Integral & Patio Tropical Acristalado" data-div="Arq. Tribu & Tribu Mobiliario" data-desc="Integración total entre cocina en madera cálida, isla monolítica de piedra y comedor artesanal abierto hacia un patio interior ajardinado.">
-          <div class="work-img-wrap">
-            <img src="arq-cocina-jardin.jpg" alt="Cocina y Comedor junto a Jardín Interior" />
-            <span class="work-tag">Proyecto Integral</span>
-          </div>
-          <div class="work-info">
-            <span>Proyecto Integral</span>
-            <h3>Cocina & Patio Interior</h3>
-            <p>Conexión interior-exterior con carpintería minimalista en madera.</p>
-          </div>
-        </article>
-
-        <!-- 6. Mobiliario: Detalle Artesanal Madera y Concreto -->
-        <article class="work-card reveal delay-2" data-category="mobiliario" data-title="Ensamble Artesanal: Madera Sólida & Concreto" data-div="Tribu Mobiliario & Acabados" data-desc="Detalle constructivo de barra revestida en duela vertical de madera natural seleccionada con veta continua bajo cubierta de concreto pulido.">
-          <div class="work-img-wrap">
-            <img src="tribu-detalle-madera.jpg" alt="Detalle Madera Sólida y Concreto" />
-            <span class="work-tag">Oficio Artesanal</span>
-          </div>
-          <div class="work-info">
-            <span>Tribu Mobiliario</span>
-            <h3>Detalle en Madera Sólida & Concreto</h3>
-            <p>Precisión en veta natural y contraste de materiales nobles.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 05. DIRECCIÓN Y LIDERAZGO -->
-  <section class="leadership-section" id="liderazgo">
-    <div class="container">
-      <div class="reveal">
-        <span class="eyebrow eyebrow-dark">Dirección & Liderazgo</span>
-        <h2 class="serif-title manifesto-heading">Dos visiones complementarias al frente de cada obra.</h2>
-      </div>
-
-      <div class="leaders-grid">
-        <!-- ARQ. JORGE ZELAYA -->
-        <article class="leader-card reveal">
-          <div class="leader-photo">
-            <img src="jorge-zelaya.png" alt="Arq. Jorge Zelaya — Fundador de Arq. Tribu Estudio" />
-          </div>
-          <div class="leader-bio">
-            <span class="leader-role">Fundador & Director de Arquitectura • Arq. Tribu Estudio</span>
-            <h3>Arq. Jorge Zelaya</h3>
-            <p>
-              Con más de una década liderando proyectos residenciales, comerciales y corporativos en Honduras, dirige la conceptualización arquitectónica, el desarrollo de planos constructivos y la ejecución estructural de cada obra.
-            </p>
-            <blockquote class="leader-quote">
-              “La verdadera diferencia está en los detalles: diseñamos espacios que seguirán funcionando y emocionando dentro de 25 años.”
-            </blockquote>
-          </div>
-        </article>
-
-        <!-- CRISTA CORRALES -->
-        <article class="leader-card reveal delay-1">
-          <div class="leader-photo">
-            <img src="crista-corrales.jpg" alt="Crista Corrales — Directora Creativa de Tribu" />
-          </div>
-          <div class="leader-bio">
-            <span class="leader-role">Directora Creativa & Mobiliario • Tribu</span>
-            <h3>Crista Corrales</h3>
-            <p>
-              Al frente de la división de mobiliario y acabados interiores, traduce la personalidad de cada cliente en piezas de madera sólida, listonados arquitectónicos y atmósferas cálidas donde la proporción y el oficio artesanal son protagonistas.
-            </p>
-            <blockquote class="leader-quote">
-              “En Tribu no solo fabricamos muebles; creamos piezas con alma que acompañan historias por generaciones.”
-            </blockquote>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 06. PUENTE AL ECOSISTEMA DIGITAL & PROTOCOLO OFICIAL DE CITAS -->
-  <section class="ecosystem-bridge" id="citas">
-    <div class="container">
-      <div class="bridge-grid">
-        <!-- INVITACIÓN AL ECOSISTEMA DIGITAL -->
-        <div class="bridge-box highlight reveal">
-          <div>
-            <span class="eyebrow">Experiencia Digital Interactiva</span>
-            <h3 class="serif-title">Lo imaginas, lo creamos.</h3>
-            <p>
-              Explorá nuestras colecciones listas para cotizar en el Catálogo Dual o ingresá al <strong>Tribu Visualization Center</strong> para configurar en tiempo real las dimensiones, maderas y acabados de tu próximo proyecto antes de tu asesoría personalizada.
-            </p>
-          </div>
-
-          <div class="division-actions">
-            <a href="visualizador.html" class="btn btn-brass">Abrir Visualization Center</a>
-            <a href="catalogo.html" class="btn btn-outline-light">Explorar Catálogo Dual</a>
-          </div>
+    <!-- ================= PORTAFOLIO SELECCIONADO (FONDOS DINÁMICOS POR FILTRO) ================= -->
+    <section id="portafolio" class="portfolio-section surface-black-marble">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="eyebrow" id="portfolioEyebrow">Obras &amp; Diseños Seleccionados</span>
+          <h2 class="section-title">Precisión en Cada Escala</h2>
+          <p class="portfolio-subtitle">
+            Seleccioná una especialidad para explorar nuestras obras y cambiar la atmósfera material de la galería.
+          </p>
         </div>
 
-        <!-- PROTOCOLO OFICIAL DE CITAS Y FINANCIAMIENTO -->
-        <div class="bridge-box reveal delay-1">
-          <div>
-            <span class="eyebrow">Atención Personalizada</span>
-            <h3 class="serif-title">Citas & Asesoría de Proyectos</h3>
+        <div class="filter-bar" role="tablist" aria-label="Filtrar portafolio">
+          <button class="filter-btn active" data-filter="all" data-surface="surface-black-marble">Todos</button>
+          <button class="filter-btn" data-filter="arquitectura" data-surface="surface-white-marble">Arquitectura y Espacios</button>
+          <button class="filter-btn" data-filter="mobiliario" data-surface="surface-mahogany">Mobiliario y Madera</button>
+        </div>
 
-            <div class="protocol-list">
-              <div class="protocol-item">
-                <strong>Arq. Tribu Estudio (Obra y Diseño)</strong>
-                <span>Cita previa con el Arq. Jorge Zelaya con mínimo 3 días de anticipación. El valor de la propuesta se deduce del costo total al realizar el proyecto. Tel: +504 3177-7094.</span>
-              </div>
-
-              <div class="protocol-item">
-                <strong>Tribu Mobiliario & Acabados</strong>
-                <span>Cotizaciones a medida, visitas técnicas y opciones de extrafinanciamiento. Tel: +504 3334-9767 • tribuhn@outlook.com</span>
-              </div>
-
-              <div class="protocol-item">
-                <strong>Respaldo Financiero & Permisos</strong>
-                <span>Acompañamiento en permisos de construcción y asesoría directa con bancos locales para financiamiento de vivienda modular y obra civil.</span>
-              </div>
+        <div class="portfolio-grid">
+          <article class="project-card" data-category="arquitectura">
+            <div class="project-media">
+              <img src="arq-terraza-chimenea.jpg" alt="Terraza Residencial en Piedra y Concreto" />
+              <span class="project-cat">Arquitectura y Espacios</span>
             </div>
-          </div>
+            <div class="project-info">
+              <h3 class="project-title">Terraza &amp; Pabellón Social</h3>
+              <p class="project-meta">Integración exterior en piedra natural, concreto aparente y cubierta cálida.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobiliario">
+            <div class="project-media">
+              <img src="tribu-cielo-laton.jpg" alt="Cielo Arquitectónico en Madera y Latón" />
+              <span class="project-cat">Mobiliario y Madera</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Plafón Escultórico &amp; Latón</h3>
+              <p class="project-meta">Carpintería arquitectónica de precisión con iluminación indirecta cálida.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="arquitectura">
+            <div class="project-media">
+              <img src="arq-loft-doble-altura.jpg" alt="Residencia Contemporánea a Doble Altura" />
+              <span class="project-cat">Arquitectura y Espacios</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Residencia de Doble Altura</h3>
+              <p class="project-meta">Amplitud espacial, ventanales de piso a techo y estructura limpia.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="mobiliario">
+            <div class="project-media">
+              <img src="tribu-biblioteca-estar.jpg" alt="Biblioteca y Estar en Madera Sólida" />
+              <span class="project-cat">Mobiliario y Madera</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Biblioteca &amp; Estar Privado</h3>
+              <p class="project-meta">Ebanistería hecha a medida con veta continua e iluminación integrada.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="arquitectura">
+            <div class="project-media">
+              <img src="arq-galeria-piedra.jpg" alt="Galería y Circulación en Piedra" />
+              <span class="project-cat">Arquitectura y Espacios</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Galería de Piedra &amp; Luz</h3>
+              <p class="project-meta">Transición interior-exterior con muros texturizados de alta permanencia.</p>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="arquitectura">
+            <div class="project-media">
+              <img src="arq-cocina-jardin.jpg" alt="Cocina Abierta hacia Jardín Interior" />
+              <span class="project-cat">Arquitectura y Espacios</span>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Cocina Integrada al Jardín</h3>
+              <p class="project-meta">Diseño funcional y social conectado con vegetación natural.</p>
+            </div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- PIE DE PÁGINA -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div>
+    <!-- ================= DIRECCIÓN Y LIDERAZGO (PIEDRA PIZARRA) ================= -->
+    <section id="direccion" class="leadership-section surface-slate">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="eyebrow">Dirección &amp; Liderazgo</span>
+          <h2 class="section-title">Dos visiones complementarias al frente de cada obra</h2>
+        </div>
+
+        <div class="leaders-grid">
+          <article class="leader-card">
+            <div class="leader-photo">
+              <img src="jorge-zelaya.png" alt="Arq. Jorge Zelaya — Director de Arq. Tribu Estudio" />
+            </div>
+            <div class="leader-body">
+              <span class="gold-logo-frame" style="width:fit-content;">
+                <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" class="gold-logo-img" style="height:30px;" />
+              </span>
+              <div class="leader-role">Director de Arquitectura &amp; Construcción</div>
+              <h3 class="leader-name">Arq. Jorge Zelaya</h3>
+              <p class="leader-bio">
+                Lidera la conceptualización espacial, el rigor estructural y la dirección técnica de obra, asegurando proyectos sólidos, funcionales y con identidad arquitectónica propia en toda Honduras.
+              </p>
+            </div>
+          </article>
+
+          <article class="leader-card">
+            <div class="leader-photo">
+              <img src="crista-corrales.jpg" alt="Crista Corrales — Directora de Tribu Mobiliario y Acabados" />
+            </div>
+            <div class="leader-body">
+              <span class="gold-logo-frame" style="width:fit-content;">
+                <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" class="gold-logo-img" style="height:30px;" />
+              </span>
+              <div class="leader-role">Directora de Mobiliario &amp; Acabados</div>
+              <h3 class="leader-name">Crista Corrales</h3>
+              <p class="leader-bio">
+                Dirige el diseño de mobiliario de autor, la selección de maderas nobles y la curaduría de acabados interiores que transforman cada ambiente en una experiencia cálida e irrepetible.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO & FOOTER (MÁRMOL NEGRO RESPLANDECIENTE) ================= -->
+    <section id="contacto" class="contact-section surface-black-marble">
+      <div class="container">
+        <div class="cta-panel">
+          <span class="eyebrow">Iniciemos Tu Proyecto</span>
+          <h2>Diseñemos el espacio o la pieza que definirá tu próximo capítulo</h2>
+          <p>
+            Atendemos proyectos residenciales, comerciales y corporativos a nivel nacional en toda Honduras. Explorá nuestro catálogo o configurá tu próxima pieza en madera sólida.
+          </p>
+          <div class="cta-buttons">
+            <a href="visualizador.html" class="btn btn-gold">Visualizar mi Mueble</a>
+            <a href="https://wa.me/50431777094?text=Hola%20Grupo%20Tribu,%20me%20interesa%20conversar%20sobre%20un%20proyecto." target="_blank" rel="noopener" class="btn btn-outline-gold">Agendar Consulta por WhatsApp</a>
+          </div>
+        </div>
+
+        <footer class="footer-bottom">
           <div class="footer-logos">
-            <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" />
-            <img src="logo-tribu.png" alt="Tribu Mobiliario" />
+            <span class="gold-logo-frame">
+              <img src="logo-arq-tribu.png" alt="Arq. Tribu Estudio" class="gold-logo-img" />
+            </span>
+            <span class="brand-sep" aria-hidden="true"></span>
+            <span class="gold-logo-frame">
+              <img src="logo-tribu.png" alt="Tribu Mobiliario y Acabados" class="gold-logo-img" />
+            </span>
           </div>
-          <p style="font-size: 0.9rem; max-width: 38ch;">
-            Arquitectura contemporánea, construcción integral y ebanistería artesanal de autor en Tegucigalpa, Copán y Choluteca, Honduras.
-          </p>
-        </div>
 
-        <div>
-          <h4>Ecosistema Digital</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">01. La Firma Corporativa</a></li>
-            <li><a href="catalogo.html">02. Catálogo Dual (Obras & Muebles)</a></li>
-            <li><a href="visualizador.html">03. Tribu Visualization Center</a></li>
-          </ul>
-        </div>
+          <div>
+            © <span id="yearNow">2026</span> Arq. Tribu Estudio &amp; Tribu Mobiliario y Acabados • Honduras
+          </div>
 
-        <div>
-          <h4>Contacto Directo</h4>
-          <ul class="footer-links">
-            <li>Arquitectura: +504 3177-7094</li>
-            <li>Mobiliario: +504 3334-9767</li>
-            <li>Correo: tribuhn@outlook.com</li>
-            <li>Instagram: @arq.tribu • @tribu_hn</li>
-          </ul>
-        </div>
+          <!-- Sello sutil exclusivo de Vanguard Digital Systems (solo emblema metálico, sin texto) -->
+          <a href="#inicio" class="vanguard-emblem-link" title="Vanguard Digital Systems" aria-label="Vanguard Digital Systems">
+            <svg width="26" height="26" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="vdsGold" x1="4" y1="4" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#F3DFA2" />
+                  <stop offset="50%" stop-color="#D4AF37" />
+                  <stop offset="100%" stop-color="#8F6E18" />
+                </linearGradient>
+              </defs>
+              <polygon points="18,2 33,10.5 33,25.5 18,34 3,25.5 3,10.5" stroke="url(#vdsGold)" stroke-width="1.35" />
+              <path d="M11.5 12L18 24.5L24.5 12" stroke="url(#vdsGold)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="18" cy="11" r="1.4" fill="url(#vdsGold)" />
+            </svg>
+          </a>
+        </footer>
       </div>
-
-      <div class="footer-bottom">
-        <span>© 2026 ARQ. TRIBU ESTUDIO & TRIBU MOBILIARIO. Todos los derechos reservados.</span>
-        <span class="vanguard-credit">Arquitectura Digital por <span>Vanguard Digital Systems</span></span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- MODAL LIGHTBOX PARA INSPECCIONAR PROYECTOS -->
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <div class="lightbox-inner">
-      <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">✕</button>
-      <img id="lightboxImg" src="" alt="" />
-      <div class="lightbox-details">
-        <span class="eyebrow" id="lightboxDiv" style="margin-bottom: 0.75rem;"></span>
-        <h3 class="serif-title" id="lightboxTitle" style="font-size: 2rem; margin-bottom: 1rem;"></h3>
-        <p id="lightboxDesc" style="color: var(--light-muted); font-size: 0.95rem; margin-bottom: 1.75rem;"></p>
-        <a href="visualizador.html" class="btn btn-brass">Cotizar Proyecto Similar</a>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
   <script>
-    // 1. Barra de navegación dinámica al hacer scroll
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-      } else {
-        navbar.classList.remove('scrolled');
-      }
-    });
-
-    // 2. Menú móvil desplegable
+    // Menú móvil
     const menuToggle = document.getElementById('menuToggle');
-    const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-    });
-
-    // 3. Transiciones suaves al aparecer cada sección en pantalla
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          revealObserver.unobserve(entry.target);
-        }
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    if (menuToggle && mobileDrawer) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = mobileDrawer.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
       });
-    }, { threshold: 0.12 });
+      mobileDrawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
 
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // 4. Filtro interactivo entre Arquitectura y Mobiliario
+    // Filtro de portafolio con transición dinámica de textura de fondo
+    const portfolioSection = document.getElementById('portafolio');
+    const portfolioEyebrow = document.getElementById('portfolioEyebrow');
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const workCards = document.querySelectorAll('.work-card');
+    const projectCards = document.querySelectorAll('.project-card');
 
     filterButtons.forEach(btn => {
       btn.addEventListener('click', () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        const filter = btn.getAttribute('data-filter');
 
-        workCards.forEach(card => {
+        const filter = btn.getAttribute('data-filter');
+        const targetSurface = btn.getAttribute('data-surface');
+
+        // Cambiar textura de fondo según categoría
+        portfolioSection.classList.remove('surface-black-marble', 'surface-white-marble', 'surface-mahogany');
+        portfolioSection.classList.add(targetSurface);
+
+        // Ajustar contraste del eyebrow en mármol blanco
+        if (targetSurface === 'surface-white-marble') {
+          portfolioEyebrow.classList.add('eyebrow-dark');
+        } else {
+          portfolioEyebrow.classList.remove('eyebrow-dark');
+        }
+
+        // Mostrar / ocultar proyectos
+        projectCards.forEach(card => {
           const cat = card.getAttribute('data-category');
           if (filter === 'all' || cat === filter) {
-            card.classList.remove('hidden');
+            card.classList.remove('hidden-item');
           } else {
-            card.classList.add('hidden');
+            card.classList.add('hidden-item');
           }
         });
       });
     });
 
-    // 5. Modal Lightbox para ver detalles de cada obra
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxDiv = document.getElementById('lightboxDiv');
-    const lightboxTitle = document.getElementById('lightboxTitle');
-    const lightboxDesc = document.getElementById('lightboxDesc');
-    const lightboxClose = document.getElementById('lightboxClose');
-
-    workCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const img = card.querySelector('img');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightboxDiv.textContent = card.getAttribute('data-div');
-        lightboxTitle.textContent = card.getAttribute('data-title');
-        lightboxDesc.textContent = card.getAttribute('data-desc');
-        lightbox.classList.add('open');
-        lightbox.setAttribute('aria-hidden', 'false');
-      });
-    });
-
-    lightboxClose.addEventListener('click', () => {
-      lightbox.classList.remove('open');
-      lightbox.setAttribute('aria-hidden', 'true');
-    });
-
-    lightbox.addEventListener('click', (e) => {
-      if (e.target === lightbox) {
-        lightbox.classList.remove('open');
-        lightbox.setAttribute('aria-hidden', 'true');
-      }
-    });
+    // Año actual
+    const yearEl = document.getElementById('yearNow');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
