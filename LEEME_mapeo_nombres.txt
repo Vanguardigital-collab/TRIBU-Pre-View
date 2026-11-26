@@ -1,0 +1,15 @@
+Nombres originales -> nombres nuevos
+IMG_5379.jpg -> pergola_exterior_jardin.jpg
+IMG_5380.jpg -> interior_pasillo_y_armarios.jpg
+IMG_5381.jpg -> sala_interior_fachada_vidriada.jpg
+IMG_5382.jpg -> sala_de_estar_diseno_interior.jpg
+IMG_5383.jpg -> cocina_modena_con_isla.jpg
+IMG_5384.jpg -> comedor_y_cocina_con_vista_al_jardin.jpg
+IMG_5385.jpg -> dormitorio_diseno_interior.jpg
+IMG_5386.jpg -> render_fachada_casa_modena_01.jpg
+IMG_5387.jpg -> render_fachada_casa_modena_02.jpg
+IMG_5388.jpg -> render_casa_modena_jardin.jpg
+IMG_5389.jpg -> obra_construccion_preparacion_terreno.jpg
+IMG_5390.jpg -> obra_construccion_estructura_hormigon.jpg
+IMG_5391.jpg -> obra_construccion_muros_y_estructura.jpg
+IMG_5392.jpg -> obra_construccion_trabajador_en_muro.jpg
